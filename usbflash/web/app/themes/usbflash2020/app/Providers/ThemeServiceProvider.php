@@ -24,5 +24,20 @@ class ThemeServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        echo 'bobo';
+    }
+
+    /**
+     * Primary Nav Menu arguments
+     * @return array
+     */
+    public function boostrapNav()
+    {
+        $args = array(
+        'theme_location'    => 'primary_navigation',
+        'menu_class'        => 'collapse navbar-collapse',
+        'walker'            => new \App\Providers\wp_bootstrap4_navwalker(),
+        );
+        return $args;
     }
 }

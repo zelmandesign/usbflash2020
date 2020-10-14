@@ -40,6 +40,7 @@
   },
   "require": {
     "php": "^7.2.5",
+    "mwdelaney/sage-bootstrap4-navwalker": "^1.7",
     "roots/acorn": "^1.1",
     "roots/soil": "^4.0"
   },
