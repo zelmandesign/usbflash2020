@@ -1,0 +1,19 @@
+# Documentation: https://roots.io/trellis/docs/local-development-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/development/vault.yml
+
+wordpress_sites:
+  usbflash.co.uk:
+    site_hosts:
+      - canonical: usbflash.test
+        redirects:
+          - www.usbflash.test
+    local_path: ../usbflash # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: andrzej@zelmandesign.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false
