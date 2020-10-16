@@ -2,6 +2,22 @@
  * Header
  */
 
-.brand {
+.navbar-brand {
   font-weight: bold;
 }
+
+.menu-item {
+  @extend .nav-link;
+}
+
+.menu-item a {
+  @extend .nav-item;
+}
+
+.menu-item-has-children {
+  @extend .dropdown;
+}
+
+// .menu-item-has-children a {
+//   @extend .dropdowndropdown-toggle;
+// }

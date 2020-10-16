@@ -9,6 +9,10 @@ a {
   color: map-get($theme-colors, 'primary');
 }
 
+.container {
+  max-width: 1400px;
+}
+
 /**
  * Block editor color palette utilities
  * @see https://git.io/JeyD6
