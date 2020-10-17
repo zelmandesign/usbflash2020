@@ -1,4 +1,4 @@
-<header class="banner navbar navbar-expand-md navbar-dark bg-dark">
+<header class="banner navbar navbar-expand-md navbar-dark">
   <div class="container">
 
     <a class="navbar-brand" href="{{ home_url('/') }}">

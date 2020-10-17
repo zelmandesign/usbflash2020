@@ -153,8 +153,13 @@ add_action('widgets_init', function () {
     ] + $config);
 });
 
-add_theme_support('custom-logo');
+/**
+ * Custom Settings.
+ *
+ * @return string
+ */
 
+add_theme_support('custom-logo');
 function themename_custom_logo_setup() {
     $defaults = array(
     // 'height'      => 100,
@@ -167,3 +172,9 @@ function themename_custom_logo_setup() {
     add_theme_support('custom-logo', $defaults);
 }
 add_action('after_setup_theme', 'themename_custom_logo_setup');
+
+// Move Yoast to bottom
+function wpcover_move_yoast() {
+    return 'low';
+}
+add_filter('wpseo_metabox_prio', 'wpcover_move_yoast');
