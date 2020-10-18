@@ -3,7 +3,7 @@
 
     <a class="navbar-brand" href="{{ home_url('/') }}">
       @if (has_custom_logo())
-        {!! the_custom_logo(); !!} 
+        {{ the_custom_logo() }} 
       @else
         {{ $siteName }}
       @endif

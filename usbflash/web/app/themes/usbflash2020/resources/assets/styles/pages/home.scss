@@ -3,6 +3,46 @@
  */
 
 .home-hero {
-  background-color: #31414e !important;
-  height: 805px;
+  background: rgb(40, 50, 59) !important;
+  background: linear-gradient(90deg, rgba(40, 50, 59, 1) 0%, rgba(50, 66, 79, 1) 100%) !important;
+
+  .bg-wrapper {
+    min-height: 805px;
+  }
+
+  .hero-wrapper {
+    max-width: 550px;
+    min-height: 725px;
+    color: #fff;
+    font-size: 15px;
+  }
+
+  .hero-heading {
+    color: #2aa8cc;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .hero-text {
+    margin: 30px 0 50px 0;
+  }
+
+  .hero-buttons {
+    .btn-danger {
+      background-color: #d4d4d4;
+      border-color: #d4d4d4;
+      color: #34393e;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 15px 45px;
+    }
+  
+    .btn-outline-danger {
+      color: #feffff;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 15px 15px;
+      border: 3px solid #d4d4d4;
+    }
+  }
 }
