@@ -19,6 +19,6 @@
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navbar-nav ml-auto']) !!}
       @endif
     </div>
-    
+
   </div>
 </header>

@@ -9,6 +9,8 @@
     >
   </label>
 
-  <input type="submit" class="btn btn-danger" value="{{ esc_attr_x('Search', 'submit button', 'sage') }}">
+  <button type="submit" class="btn btn-danger" value="{{ esc_attr_x('', 'submit button', 'sage') }}">
+    <img src="@asset('images/Magnifying-Glass-Icon.svg')" alt="" width="20" height="20" class="">
+  </button>
 </form>
  
