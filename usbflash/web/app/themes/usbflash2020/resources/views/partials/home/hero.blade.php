@@ -5,10 +5,12 @@
     <div class="container">
       <div class="hero-wrapper d-flex align-items-center">
         <div class="hero-head">
-          <div id="typed">
-            <p>Typed.js is a <strong>JavaScript</strong> library.</p>
-            <p>It <em>types</em> out sentences.</p>
+          <div class="typed-strings">
+            <p>we brand.</p>
+            <p>we create.</p>
+            <p>we print...</p>
           </div>
+          <span id="typed"></span>
 
           <div class="hero-heading">
             The UK's leading supplier of promotional

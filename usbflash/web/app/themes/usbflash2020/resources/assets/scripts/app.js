@@ -10,5 +10,10 @@ $(document).ready(() => {
 });
 
 var typed = new Typed('#typed', {
-  stringsElement: '#typed'
+  stringsElement: '.typed-strings',
+  backSpeed: 0,
+  typeSpeed: 100,
+  backDelay: 700,
+  loop: true,
+  showCursor: false,
 });
