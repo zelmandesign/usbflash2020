@@ -28,6 +28,11 @@
           
         </div>
       </div>
+
+      <div class="d-flex justify-content-center">
+        <img src="@asset('images/chevron-down-white.gif')" alt="" width="95" height="95">
+      </div>
+      
     </div>
   </div>
 </section>

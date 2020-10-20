@@ -14,17 +14,10 @@
     max-width: 550px;
     min-height: 725px;
     color: #fff;
-    font-size: 15px;
   }
 
   #typed {
     font-size: 100px;
-    font-weight: bold;
-  }
-
-  .hero-heading {
-    color: #2aa8cc;
-    font-size: 25px;
     font-weight: bold;
   }
 
@@ -59,5 +52,115 @@
         border-color: #2aa8cc;
       }
     }
+  }
+}
+
+.home-browse {
+  color: #b5b5b5;
+  height: 50vh;
+
+  .text-bold {
+    font-size: 17px;
+    font-weight: bold;
+    color: #3c3c3c;
+    margin-bottom: 5px;
+  }
+}
+
+.home-spotlight {
+  color: #3c3c3c;
+  margin-bottom: 150px;
+
+  .splat-wrapper {
+    position: relative;
+    // width: 820px;
+    // height: 513px;
+    // left: -200px;
+
+    .home-product {
+      position: absolute;
+      z-index: 1;
+      left: 40px;
+      top: 200px;
+    }
+
+    .splat-bg {
+      position: absolute;
+      left: -200px;
+    }
+  }
+
+  .home-spotlight-text {
+    min-height: 40vh;
+    display: flex;
+  }
+
+  .btn-outline-danger {
+    font-size: 13px;
+    border: 3px solid #2aa8cc;
+    padding: 0.5rem 1.5rem;
+    color: #3c3c3c;
+
+    &:hover {
+      background-color: #2aa8cc;
+      color: #fff;
+    }
+  }
+}
+
+.home-featured {
+  margin-bottom: 100px;
+
+  .sub-heading {
+    font-size: 40px;
+  }
+
+  .bt-line {
+    background-color: #e5e5e5;
+    height: 1px;
+    width: 50px;
+  }
+
+  .prod-name {
+    font-size: 16px;
+    margin: 15px 0 5px 0;
+  }
+
+  .category-name {
+    font-size: 13px;
+    margin-bottom: 15px;
+    color: #2aa8cc;
+  }
+
+  .prod-glass {
+    position: absolute;
+    bottom: 0;
+    right: 12.5%;
+  }
+
+  .bt-line-prod {
+    background-color: #e5e5e5;
+    height: 1px;
+    width: 80%;
+  }
+}
+
+.home-work-with-us {
+  height: 45vh;
+  color: #fff;
+
+  .hero-heading {
+    color: #71c299;
+  }
+
+  .sub-heading {
+    font-size: 40px;
+    color: #fff;
+  }
+
+  .text-bold {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
   }
 }
