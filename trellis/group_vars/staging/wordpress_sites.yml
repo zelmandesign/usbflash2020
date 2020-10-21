@@ -9,7 +9,7 @@ wordpress_sites:
         # redirects:
         #   - otherdomain.com
     local_path: ../usbflash # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:example/example.com.git # replace with your Git repo URL
+    repo: git@github.com:zelmandesign/usbflash2020.git # replace with your Git repo URL
     repo_subtree_path: usbflash # relative path to your Bedrock/WP directory in your repo
     branch: master
     multisite:

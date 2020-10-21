@@ -1,8 +1,10 @@
 # Add each host to the [staging] group and to a "type" group such as [web] or [db].
 # List each machine only once per [group], even if it will host multiple sites.
 
-[staging]
-your_server_hostname
+kinsta_staging ansible_host=35.246.48.203 ansible_ssh_port=37156 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
 
 [web]
-your_server_hostname
+kinsta_staging
+
+[staging]
+kinsta_staging
