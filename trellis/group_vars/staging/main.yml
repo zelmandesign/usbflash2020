@@ -2,5 +2,5 @@ mysql_root_password: "{{ vault_mysql_root_password }}" # Define this variable in
 
 project_root: /www/pukahiri_433/public
 www_root: /www/pukahiri_433/public
-web_user: example
+web_user: pukahiri
 web_group: www-data
