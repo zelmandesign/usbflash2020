@@ -41,7 +41,12 @@
 # - name: Install Composer dependencies
 # composer:
 # command: install
-# working_dir: >/www/pukahiri_433/public/current
+# working_dir: >/www/pukahiri_433/public/releases/20201021142924
+
+- name: Install Composer dependencies
+  command: composer install 
+  args:
+    chdir: "{{ deploy_helper.new_release_path }}"
 
 - name: Clear Kinsta cache
   uri:
