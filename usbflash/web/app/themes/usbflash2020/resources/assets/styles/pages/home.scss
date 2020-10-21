@@ -164,3 +164,32 @@
     font-weight: bold;
   }
 }
+
+.home-help {
+  min-height: 60vh;
+  color: #fff;
+
+  .home-help-wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .sub-heading {
+    font-size: 60px;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  .text-bold {
+    //font-size: 17px;
+    font-weight: bold;
+    //color: #3c3c3c;
+    //margin-bottom: 5px;
+  }
+
+  .hero-heading {
+    color: #fff;
+    margin-top: 50px;
+  }
+}
