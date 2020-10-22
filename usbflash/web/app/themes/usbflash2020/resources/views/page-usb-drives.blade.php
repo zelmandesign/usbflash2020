@@ -4,10 +4,10 @@
   @include('partials.hero-product')
 
   <div class="container">
-    @if($gadgetsQuery)
-      @foreach($gadgetsQuery as $post)          
+    @if($usbdrivesQuery)
+      @foreach($usbdrivesQuery as $post)          
         <div class="...">
-          <p><a href="{{ get_permalink($post['title']) }}" class="...">{{ $post['title'] }}</a></p>
+          <p><a href="#" class="...">{{ $post['title'] }}</a></p>
         </div>
       @endforeach
     @else 
