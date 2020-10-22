@@ -128,3 +128,8 @@ Config::apply();
 if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
+
+/**
+ * Kinsta Cache
+ */
+define( 'KINSTA_CDN_USERDIRS', 'app');
