@@ -6,9 +6,7 @@
   <div class="container">
     @if($usbdrivesQuery)
       @foreach($usbdrivesQuery as $post)          
-        <div class="...">
-          <p><a href="#" class="...">{{ $post['title'] }}</a></p>
-        </div>
+        @include('partials.product.single')
       @endforeach
     @else 
       <x-alert type="warning">

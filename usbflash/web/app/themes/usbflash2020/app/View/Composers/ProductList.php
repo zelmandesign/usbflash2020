@@ -14,6 +14,7 @@ class ProductList extends Composer
     protected static $views = [
         'page-gadgets-tech',
         'page-usb-drives',
+        'partials.product.single'
     ];
 
     /**
@@ -47,6 +48,9 @@ class ProductList extends Composer
             function ($post) {
                 return array(
                     'title'   => $post->post_title,
+                    'post_id' => $post->ID,
+                    'content' => $post->post_content,
+                    'excerpt' => $post->post_excerpt,
                 );
             },
             $result->posts
