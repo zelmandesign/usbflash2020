@@ -1,17 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
-  <?php
-
-  // get the current taxonomy term
-  $term = get_queried_object();
-
-  // vars
-  $image = get_field('header_image_tax_mob', $term);
-      
-  ?>
-
   <div class="category-header" style="background: url('@php echo $image; @endphp');">
     <div class="container">
       <div class="page-header">
@@ -26,7 +15,7 @@
         </div>
 
         
-        <h1>{!! App::title() !!}</h1>
+        <h1>{{ $title }}</h1>
 
         <div class="cat-desc mb-4">
           <div class="row">
@@ -48,11 +37,9 @@
       </div>
     @endif
 
-    <div class="row mb-4">
+    <div class="row mb-4 product-list">
       @while (have_posts()) @php the_post() @endphp
-        <div class="col-md-4">
-          @include('partials.content-'.get_post_type())
-        </div>
+        @include('partials.product.single')
       @endwhile
     </div>
 

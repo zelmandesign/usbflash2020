@@ -8,6 +8,10 @@ body {
 
 a {
   color: map-get($theme-colors, 'primary');
+  
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .container {

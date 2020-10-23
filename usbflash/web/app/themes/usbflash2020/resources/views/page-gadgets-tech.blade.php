@@ -1,12 +1,12 @@
 @extends('layouts.archive')
 
 @section('content')
-  @include('partials.hero-product')
+  @include('partials.product.hero-product')
 
   <div class="container">
     @if($gadgetsQuery)
-      <div class="row">
-        @foreach($gadgetsQuery as $gadgets_single)          
+      <div class="row product-list">
+        @foreach($gadgetsQuery as $post)
           @include('partials.product.single')
         @endforeach
       </div>

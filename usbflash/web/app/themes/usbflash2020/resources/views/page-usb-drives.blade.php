@@ -1,14 +1,16 @@
 @extends('layouts.archive')
 
 @section('content')
-  @include('partials.hero-product')
+  @include('partials.product.hero-product')
 
   <div class="container">
     @if($usbdrivesQuery)
-      @foreach($usbdrivesQuery as $post)          
-        @include('partials.product.single')
-      @endforeach
-    @else 
+      <div class="row product-list">
+        @foreach($usbdrivesQuery as $post)
+          @include('partials.product.single')
+        @endforeach
+      </div>
+    @else
       <x-alert type="warning">
         {!! __('Sorry, no results were found.', 'sage') !!}
       </x-alert>

@@ -17,3 +17,7 @@ var typed = new Typed('#typed', {
   loop: true,
   showCursor: false,
 });
+
+$('.navbar .dropdown > a').click(function () {
+  location.href = this.href;
+});

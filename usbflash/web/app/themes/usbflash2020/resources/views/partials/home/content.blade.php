@@ -90,7 +90,7 @@
   </div>
 </section>
 
-<section class="home-featured">
+<section class="home-featured product-list">
   <div class="container">
     <div class="hero-heading">FEATURED TECH</div>
     <div class="sub-heading">Check out what's popular</div>

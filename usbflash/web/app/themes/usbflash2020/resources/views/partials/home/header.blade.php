@@ -1,12 +1,8 @@
-<header class="banner navbar navbar-expand-md navbar-light pt-5 pb-3">
+<header class="banner navbar navbar-expand-md navbar-dark">
   <div class="container">
 
     <a class="navbar-brand" href="{{ home_url('/') }}">
-      @if (has_custom_logo())
-        {{ the_custom_logo() }} 
-      @else
-        {{ $siteName }}
-      @endif
+      <img src="@asset('images/USB-Flash-Logo-White.svg')" alt="USBflash.co.uk" width="127" height="76">
     </a>
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

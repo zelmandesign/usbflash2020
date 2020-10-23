@@ -26,8 +26,7 @@ class ProductList extends Composer
     {
         return [
             'usbdrivesQuery' => $this->usbdrivesQuery(),
-            'gadgetsQuery' => $this->gadgetsQuery(),
-            'boboFruit' => $this->boboFruit(),
+            'gadgetsQuery' => $this->gadgetsQuery()
         ];
     }
 
@@ -40,17 +39,15 @@ class ProductList extends Composer
     {
         $args = array(
             'post_type' => 'gadgets-product',
-            'posts_per_page'=>'10',
         );
         $result = new \WP_Query($args);
 
         $data = array_map(
             function ($post) {
                 return array(
-                    'title'   => $post->post_title,
-                    'post_id' => $post->ID,
-                    'content' => $post->post_content,
-                    'excerpt' => $post->post_excerpt,
+                    'title'     => $post->post_title,
+                    'post_id'   => $post->ID,
+                    'post_type' => $post->post_type,
                 );
             },
             $result->posts
@@ -59,7 +56,7 @@ class ProductList extends Composer
     }
 
     /**
-     * Gadgets Query
+     * USB Drives Query
      *
      * @return array
      */
@@ -67,24 +64,19 @@ class ProductList extends Composer
     {
         $args = array(
             'post_type' => 'usb-product',
-            'posts_per_page'=>'10',
         );
         $result = new \WP_Query($args);
 
         $data = array_map(
             function ($post) {
                 return array(
-                    'title'   => $post->post_title,
+                    'title'     => $post->post_title,
+                    'post_id'   => $post->ID,
+                    'post_type' => $post->post_type,
                 );
             },
             $result->posts
         );
         return $data;
-    }
-
-    public function boboFruit()
-    {
-        $bobo = 'dhsajhdahjadshkhaks';
-        return $bobo;
     }
 }
