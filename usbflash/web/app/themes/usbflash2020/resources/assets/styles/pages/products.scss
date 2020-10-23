@@ -2,12 +2,31 @@
  * Archive - Gadgets & USB Drives
  */
 
+.hero-prod-heading {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.hero-category {
+  margin-bottom: 70px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+}
+
 .hero-product {
   background: rgb(40, 50, 59) !important;
-  margin-bottom: 70px;
 
   .prod-bg-wrapper {
     min-height: 40vh;
+  }
+}
+
+.hero-tax {
+  background: #32424f !important;
+
+  .hero-tax-wrapper {
+    min-height: 30vh;
   }
 }
 

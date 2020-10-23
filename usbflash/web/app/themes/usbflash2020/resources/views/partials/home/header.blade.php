@@ -2,7 +2,7 @@
   <div class="container">
 
     <a class="navbar-brand" href="{{ home_url('/') }}">
-      <img src="@asset('images/USB-Flash-Logo-White.svg')" alt="USBflash.co.uk" width="127" height="76">
+      <img src="@asset('images/USB-Flash-Logo-White.svg')" alt="USBflash.co.uk" width="93" height="76">
     </a>
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

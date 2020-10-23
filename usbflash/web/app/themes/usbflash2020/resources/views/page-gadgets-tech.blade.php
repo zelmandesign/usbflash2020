@@ -1,7 +1,7 @@
 @extends('layouts.archive')
 
 @section('content')
-  @include('partials.product.hero-product')
+  @include('partials.product.hero-top-category')
 
   <div class="container">
     @if($gadgetsQuery)

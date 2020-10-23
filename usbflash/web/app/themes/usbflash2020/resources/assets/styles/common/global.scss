@@ -8,7 +8,7 @@ body {
 
 a {
   color: map-get($theme-colors, 'primary');
-  
+
   &:hover {
     text-decoration: none;
   }
@@ -28,6 +28,16 @@ a {
   color: #3c3c3c;
   font-size: 50px;
   font-weight: bold;
+}
+
+#breadcrumbs {
+  a {
+    color: #fff;
+
+    &:hover {
+      color: darken($color: #fff, $amount: 20%);
+    }
+  }
 }
 
 /**

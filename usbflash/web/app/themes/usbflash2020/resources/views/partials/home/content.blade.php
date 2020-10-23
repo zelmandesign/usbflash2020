@@ -182,7 +182,7 @@
   </div>
 </section>
 
-<section class="home-help bg-success d-flex align-items-center">
+<section class="home-help d-flex align-items-center" style="background: url('@field('home_help_bg_image')') center center no-repeat;">
   <div class="home-help-wrapper text-center">
     <div class="sub-heading">Need help <span class="text-bold">sourcing</span> a promotional gift for your next event?</div>
     We have over i20+ years experience within the promotional sector, so we like to think we know a thing or two about promotional gifts. Whilst primarily specialists in branded usb sticks and promotional technology, we often have direct contact with factories who manufacture a range of different products. So if your looking for a promotional gift that isn't featured on our site please get in touch and we will do our best to try and source it for you.
