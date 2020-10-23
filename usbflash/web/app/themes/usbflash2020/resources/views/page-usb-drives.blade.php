@@ -6,7 +6,7 @@
   <div class="container">
     @if($usbdrivesQuery)
       <div class="row product-list">
-        @foreach($usbdrivesQuery as $post)
+        @foreach($usbdrivesQuery as $single_product)
           @include('partials.product.single')
         @endforeach
       </div>

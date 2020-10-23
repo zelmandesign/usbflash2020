@@ -6,7 +6,7 @@
   <div class="container">
     @if($gadgetsQuery)
       <div class="row product-list">
-        @foreach($gadgetsQuery as $post)
+        @foreach($gadgetsQuery as $single_product)
           @include('partials.product.single')
         @endforeach
       </div>
