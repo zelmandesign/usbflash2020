@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6d46aace0a0842c6ef9d2560046eb08a",
+    "content-hash": "0db5f9e0e0173f074b62cc97ad913b1c",
     "packages": [
         {
             "name": "composer/installers",
@@ -827,6 +827,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/query-monitor/"
+        },
+        {
+            "name": "wpackagist-plugin/show-current-template",
+            "version": "0.3.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/show-current-template/",
+                "reference": "tags/0.3.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/show-current-template.0.3.4.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/show-current-template/"
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",

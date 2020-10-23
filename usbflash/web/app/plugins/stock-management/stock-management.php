@@ -14,11 +14,11 @@ if ( ! defined ('ABSPATH')) {
     exit;
 }
 
-// USB Drives 
-
-add_action( 'init', 'register_usb_drives_post_type' );
-function register_usb_drives_post_type() {
-    register_post_type( 'usb-product',
+// USB Drives CPT
+add_action('init', 'register_usb_drives_post_type');
+function register_usb_drives_post_type()
+{
+    register_post_type('usb-product',
         array(
             'labels' => array(
                 'name' => 'USB Drives',
@@ -26,7 +26,7 @@ function register_usb_drives_post_type() {
                 'singular_name' => 'USB Drive',
                 'all_items' => 'All Products'
             ),
-            'menu_icon' => plugin_dir_url( __FILE__ ) . 'img/usb-icon.png',
+            'menu_icon' => plugin_dir_url(__FILE__) . 'img/usb-icon.png',
             'public' => true,
             'publicly_queryable' => true,
             'show_ui' => true,
@@ -34,12 +34,12 @@ function register_usb_drives_post_type() {
             'show_in_nav_menus' => true,
             'supports' => array( 'title', 'editor', 'thumbnail', 'post-formats', 'custom-fields' , 'excerpt' ),
             'hierarchical' => false,
-            'has_archive' => 'usb-drives',
+            'has_archive' => 'usb',
             'taxonomies' => array('usb-category'),
-            'rewrite' => array( 'slug' => 'usb-drives', 'hierarchical' => true, 'with_front' => false )
+            'rewrite' => array( 'slug' => 'usb', 'hierarchical' => true, 'with_front' => false )
         )
     );
-    register_taxonomy( 'usb-category', array( 'usb-product' ),
+    register_taxonomy( 'usb-category', array('usb-product'),
         array(
             'labels' => array(
                 'name' => 'USB Categories',
@@ -55,19 +55,19 @@ function register_usb_drives_post_type() {
 }
 
 
-// Mobile Accessories
-
-add_action( 'init', 'register_mobile_post_type' );
-function register_mobile_post_type() {
-    register_post_type( 'mobile-product',
+// Gadgets & Tech CPT
+add_action('init', 'register_gadgets_post_type');
+function register_gadgets_post_type()
+{
+    register_post_type('gadgets-product',
         array(
             'labels' => array(
-                'name' => 'Mobile',
-                'menu_name' => 'Mobile',
-                'singular_name' => 'Mobile',
+                'name' => 'Gadgets',
+                'menu_name' => 'Gadgets',
+                'singular_name' => 'Gadgets',
                 'all_items' => 'All Products'
             ),
-            'menu_icon' => plugin_dir_url( __FILE__ ) . 'img/mobile-icon.png',
+            'menu_icon' => plugin_dir_url(__FILE__) . 'img/mobile-icon.png',
             'public' => true,
             'publicly_queryable' => true,
             'show_ui' => true,
@@ -75,17 +75,18 @@ function register_mobile_post_type() {
             'show_in_nav_menus' => true,
             'supports' => array( 'title', 'editor', 'thumbnail', 'post-formats', 'custom-fields', 'excerpt' ),
             'hierarchical' => false,
-            'has_archive' => 'mobile',
-            'taxonomies' => array('mobile-category'),
-            'rewrite' => array( 'slug' => 'mobile', 'hierarchical' => true, 'with_front' => false )
+            'has_archive' => 'gadgets',
+            'taxonomies' => array('gadgets-category'),
+            'rewrite' => array( 'slug' => 'gadgets', 'hierarchical' => true, 'with_front' => false )
         )
     );
-    register_taxonomy( 'mobile-category', array( 'mobile-product' ),
+
+    register_taxonomy( 'gadgets-category', array('gadgets-product'),
         array(
             'labels' => array(
-                'name' => 'Mobile Categories',
-                'menu_name' => 'Mobile Categories',
-                'singular_name' => 'Mobile Category',
+                'name' => 'Gadgets Categories',
+                'menu_name' => 'Gadgets Categories',
+                'singular_name' => 'Gadgets Category',
                 'all_items' => 'All Categories'
             ),
             'public' => true,
