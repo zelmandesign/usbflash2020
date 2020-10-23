@@ -1,4 +1,4 @@
-@extends('layouts.archive')
+@extends('layouts.app')
 
 @section('content')
   @include('partials.product.hero-top-category')

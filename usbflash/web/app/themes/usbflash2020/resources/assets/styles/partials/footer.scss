@@ -2,9 +2,10 @@
   background-color: #313a41;
   color: $grey-nav;
   height: 50vh;
+  margin-top: 200px;
 
   .container {
-    max-width: 970px;
+    max-width: 1000px;
   }
 
   strong {
@@ -68,5 +69,11 @@
   @include media-breakpoint-down(md) {
     text-align: center;
     padding: 90px 0;
+  }
+}
+
+.home {
+  .content-info {
+    margin-top: 0;
   }
 }

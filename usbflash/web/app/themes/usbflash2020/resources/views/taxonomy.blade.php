@@ -1,4 +1,4 @@
-@extends('layouts.archive')
+@extends('layouts.app')
 
 @section('content')
   @include('partials.product.hero-tax')
@@ -18,5 +18,12 @@
     </div>
 
   </div>
-  {!! get_the_posts_navigation() !!}
+  {{ the_posts_pagination() }}
+  <?php next_posts_link('Newer posts'); ?>
+  <?php previous_posts_link('Older posts' ); ?>
+  {!! get_the_posts_navigation([
+    'screen_reader_text' => '',
+    'prev_text'          => 'Older events',
+    'next_text'          => 'Newer events'
+  ]) !!}
 @endsection

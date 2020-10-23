@@ -2,6 +2,10 @@
  * Header
  */
 
+.navbar {
+  font-size: 14px;
+}
+
 .navbar-brand {
   font-weight: bold;
 }
@@ -19,7 +23,30 @@
 }
 
 .dropdown-menu {
-  margin-top: -10px;
+  width: 190px;
+  margin-top: -1px;
+  font-size: 14px;
+  border-radius: 0 0 10px 10px !important;
+  padding: 0;
+
+  .nav-link,
+  .nav-item {
+    padding: 0.25rem 0.25rem !important;
+    border-radius: 0 !important;
+    color: #313a41 !important;
+
+    &:hover {
+      color: #fff !important;
+    }
+
+    &:first-child {
+      border-radius: 0 !important;
+    }
+
+    &:last-child {
+      border-radius: 0 0 10px 10px !important;
+    }
+  }
 }
 
 .dropdown:hover > .dropdown-menu {

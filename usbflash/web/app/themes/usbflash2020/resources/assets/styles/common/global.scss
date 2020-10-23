@@ -30,6 +30,30 @@ a {
   font-weight: bold;
 }
 
+.page-header {
+  position: relative;
+  background-color: #33536c;
+  color: #fff;
+  margin-bottom: 70px;
+}
+
+.search {
+  .page-header {
+    .container {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 65px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 40px 52.5px 0 52.5px;
+        border-color: #33536c transparent transparent transparent;
+      }
+    }
+  }
+}
+
 #breadcrumbs {
   a {
     color: #fff;

@@ -19,7 +19,3 @@
 
   {!! get_the_posts_navigation() !!}
 @endsection
-
-@section('sidebar')
-  @include('partials.sidebar')
-@endsection

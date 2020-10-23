@@ -37,8 +37,11 @@ class ProductList extends Composer
      */
     public function gadgetsQuery()
     {
+        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
         $args = array(
             'post_type' => 'gadgets-product',
+            'page' => $paged,
+            'posts_per_page' => 1
         );
         $result = new \WP_Query($args);
 
