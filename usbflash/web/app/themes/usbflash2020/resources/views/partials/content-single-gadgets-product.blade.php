@@ -1,156 +1,83 @@
+<article @php(post_class())>
+  @include('partials.page-header')
 
-<article @php post_class() @endphp>
-  <div class="single-wrapper">
-    <div class="container">
-      <header>
-        
-        <div id="breadcrumbs">
-          <?php
-          if(function_exists('bcn_display'))
-          {
-          bcn_display();
-          }
-          ?>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <img src="@field('prod_hero_image', 'url')" alt="@field('prod_hero_image', 'alt')" class="img-fluid lozad prod-img-bg mb-4" />
+
+        @if(have_rows('prod_thumbs')) 
+          <div class="row">
+            @while(have_rows('prod_thumbs')) @php(the_row('prod_thumbs'))
+              <div class="col">
+                <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" class="img-fluid lozad prod-img-bg" />
+              </div>
+            @endwhile
+          </div>
+        @endif
+
+      </div>
+      <div class="col-md">
+        <h1 class="entry-title">
+          {!! $title !!}
+        </h1>
+        <div class="mb-3">
+          @hasfield('prod_short_description')
+            @field('prod_short_description')
+          @endfield
         </div>
-        
-        <h1 class="entry-title text-center">{{ get_the_title() }}</h1>
-        
-        <?php if( get_field('usb_prod_subtitle') ): ?>
-          <h2 class="entry-subtitle text-center"><?php the_field('usb_prod_subtitle'); ?></h2>
-        <?php endif; ?>
-        
-        <div class="hero text-center mt-5 pb-5">
-          <?php 
-            $image = get_field('hero_image');
-            if( !empty($image) ): ?>
-              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-fluid lozad" />
-          <?php endif; ?>
-        </div>
-      </header>
-    </div>
-  </div>
 
-  <div class="thumbs">
-    <div class="container">
-      <div class="row">
-        <?php if( have_rows('thumbs') ): ?>
-          <?php while( have_rows('thumbs') ): the_row(); 
-            // vars
-            $image = get_sub_field('product_image');
-          ?>
+        @if(have_rows('paragraphs_&_icons')) 
+          @while(have_rows('paragraphs_&_icons')) @php(the_row('paragraphs_&_icons'))
+            <div class="row mb-4">
+              <div class="col-2 d-flex align-items-center">
+                <img src="@sub('icon', 'url')" alt="@sub('icon', 'alt')" class="img-fluid lozad" />  
+              </div>
+              <div class="col">
+                @sub('verbiage')
+              </div>
+            </div>
+          @endwhile
+        @endif
 
-          <div class="col-md mb-5 text-center">
-            <div class="thumb-ins">
-              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" class="img-fluid lozad" />
+        <div class="modal-wrapper">
+          <div class="sub mb-4">how many do you need?</div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="ex. 100" aria-label="ex. 100" aria-describedby="basic-addon2" id="qty-input" onchange="dateEntered()"> 
+            <div class="input-group-append">
+              <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#productModal" data-whatever="100">quick quote</button>
             </div>
           </div>
 
-          <?php endwhile; ?>
-        <?php endif; ?>
-      </div>
-    </div>      
-  </div>
-
-  <div class="quote">
-    <div class="container">
-      <div class="row">
-        <div class="col-md">
-          <div class="quote-text">
-          <h4>DESCRIPTION</h4>
-           
-            <?php if( get_field('product_description') ): ?>
-              <?php the_field('product_description'); ?></h2>
-            <?php endif; ?>
-
-            <div class="row technical">
-              <div class="col-md-8">
-                <h4>TECHNICAL</h4>
-                <hr>
-
-                @php if( have_rows('technical') ): @endphp
-                  @php while( have_rows('technical') ): the_row(); @endphp
-
-                    <div class="row">
-                      <div class="col-5">
-                        Minimum Order
-                      </div>
-                      <div class="col">
-                        @php the_sub_field('minimum_order'); @endphp
-                      </div>
+          <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel">New message</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Recipient:</label>
+                      <input type="text" class="form-control" id="recipient-name">
                     </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-5">
-                        Leadtime
-                      </div>
-                      <div class="col">
-                        @php the_sub_field('leadtime'); @endphp
-                      </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Message:</label>
+                      <textarea class="form-control" id="message-text"></textarea>
                     </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-5">
-                        Branding
-                      </div>
-                      <div class="col">
-                        @php the_sub_field('branding'); @endphp
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-5">
-                        Print Area
-                      </div>
-                      <div class="col">
-                        @php the_sub_field('print_area'); @endphp
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-5">
-                        Colours
-                      </div>
-                      <div class="col">
-
-                        <?php
-
-                        // vars 
-                        $colors = get_sub_field('colors');
-
-
-                        // check
-                        if( $colors ): ?>
-                        
-                          <?php foreach( $colors as $color ): ?>
-                            <div class="color <?php echo $color; ?>"></div>
-                          <?php endforeach; ?>
-                        
-                        <?php endif; ?>
-                      </div>
-                    </div>
-                    <hr>
-
-                  @php endwhile; @endphp
-                @php endif; @endphp
-
-                
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Send message</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md">
-          <div class="quote-form">
-            <h3>QUICK QUOTE</h3>
 
-            <?php 
-              if( get_post_type() == 'mobile-product' ) {
-                   echo do_shortcode('[contact-form-7 id="582" title="Mobile Product"]');
-              } else {
-                  echo "Wrong Product type";
-              }
-              ?>
-
-          </div>
         </div>
       </div>
     </div>

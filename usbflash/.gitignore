@@ -2,6 +2,7 @@
 web/app/plugins/*
 !web/app/plugins/.gitkeep
 !web/app/plugins/advanced-custom-fields-pro-master
+!web/app/plugins/safe-svg
 !web/app/plugins/stock-management
 !web/app/plugins/wp-sync-db
 !web/app/plugins/wp-sync-db-media-files

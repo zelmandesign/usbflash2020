@@ -21,9 +21,9 @@ function register_usb_drives_post_type()
     register_post_type('usb-product',
         array(
             'labels' => array(
-                'name' => 'USB Drives',
-                'menu_name' => 'USB Drives',
-                'singular_name' => 'USB Drive',
+                'name' => 'USB Sticks',
+                'menu_name' => 'USB Sticks',
+                'singular_name' => 'USB Stick',
                 'all_items' => 'All Products'
             ),
             'menu_icon' => plugin_dir_url(__FILE__) . 'img/usb-icon.png',
@@ -42,9 +42,9 @@ function register_usb_drives_post_type()
     register_taxonomy( 'usb-category', array('usb-product'),
         array(
             'labels' => array(
-                'name' => 'USB Categories',
-                'menu_name' => 'USB Categories',
-                'singular_name' => 'USB Category',
+                'name' => 'USB Sticks Categories',
+                'menu_name' => 'USB Sticks Categories',
+                'singular_name' => 'USB Sticks Category',
                 'all_items' => 'All Categories'
             ),
             'public' => true,
@@ -62,9 +62,9 @@ function register_gadgets_post_type()
     register_post_type('gadgets-product',
         array(
             'labels' => array(
-                'name' => 'Gadgets',
-                'menu_name' => 'Gadgets',
-                'singular_name' => 'Gadgets',
+                'name' => 'Tech Gifts',
+                'menu_name' => 'Tech Gifts',
+                'singular_name' => 'Tech Gifts',
                 'all_items' => 'All Products'
             ),
             'menu_icon' => plugin_dir_url(__FILE__) . 'img/mobile-icon.png',
@@ -84,9 +84,9 @@ function register_gadgets_post_type()
     register_taxonomy( 'gadgets-category', array('gadgets-product'),
         array(
             'labels' => array(
-                'name' => 'Gadgets Categories',
-                'menu_name' => 'Gadgets Categories',
-                'singular_name' => 'Gadgets Category',
+                'name' => 'Tech Gifts Categories',
+                'menu_name' => 'Tech Gifts Categories',
+                'singular_name' => 'Tech Gifts Category',
                 'all_items' => 'All Categories'
             ),
             'public' => true,

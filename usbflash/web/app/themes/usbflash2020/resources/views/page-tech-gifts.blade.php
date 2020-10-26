@@ -6,9 +6,10 @@
   <div class="container">
 
       @php 
-      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-      $args = array('posts_per_page' => 9, 'paged' => $paged,'post_type' => 'gadgets-product' );
-      query_posts($args); @endphp
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $args = array('posts_per_page' => 9, 'paged' => $paged, 'post_type' => 'gadgets-product' );
+        query_posts($args); 
+      @endphp
 
 
 

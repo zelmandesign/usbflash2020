@@ -12,8 +12,8 @@ class ProductList extends Composer
      * @var array
      */
     protected static $views = [
-        'page-gadgets-tech',
-        'page-usb-drives',
+        'page-tech-gifts',
+        'page-usb-sticks',
         'partials.product.single'
     ];
 

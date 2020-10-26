@@ -56,3 +56,37 @@
     width: 80%;
   }
 }
+
+/**
+ * Single - Gadgets & USB Drives - Global styles
+ */
+
+.gadgets-product,
+.usb-product {
+  font-weight: 300;
+  color: #808080;
+
+  .entry-title {
+    font-weight: bold;
+    font-size: 25px;
+    color: #3c3c3c;
+  }
+
+  b {
+    color: #3c3c3c;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  .prod-img-bg {
+    background-color: #f6f7f9;
+  }
+
+  .modal-wrapper {
+    .sub {
+      color: #3c3c3c;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
