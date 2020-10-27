@@ -81,19 +81,63 @@
   .prod-img-bg {
     background-color: #f6f7f9;
   }
-
-  .modal-wrapper {
-    .sub {
-      color: #3c3c3c;
-      font-size: 18px;
-      font-weight: bold;
-    }
-  }
 }
 
 /**
  * Modal Styles
  **/
+
+.modal-wrapper {
+  .sub {
+    color: #3c3c3c;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .form-control {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid $ligh-blue;
+    padding: 1.25rem 0.75rem;
+  }
+
+  .input-group {
+    width: 267px;
+
+    .form-control {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      border: 2px solid $ligh-blue;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .btn-danger {
+      color: #fff;
+      background-color: $ligh-blue;
+      border-color: $ligh-blue;
+      border-radius: 0 10px 10px 0;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 0 2.35rem;
+    }
+
+    .qty-btn-like {
+      color: #fff;
+      background-color: $ligh-blue;
+      border-color: $ligh-blue;
+      border-radius: 0 10px 10px 0;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 0.75rem 4rem;
+    }
+  }
+}
 
 .modal-dialog {
   max-width: 832px;

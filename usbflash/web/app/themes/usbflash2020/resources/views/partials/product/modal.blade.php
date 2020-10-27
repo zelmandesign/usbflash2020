@@ -27,15 +27,18 @@
          
           <form>
             <div class="form-group row">
-              <label for="recipient-name" class="col-sm-2 col-form-label">Quantity : </label>
+              <label for="recipient-name" class="col-sm-2 col-form-label">Quantity</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="qty" required>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" id="qty" placeholder="ex. 100" required> 
+                  <div class="qty-btn-like">QTY</div>
+                </div>
               </div>
             </div>
             <fieldset class="form-group">
               <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">How many print colours:</legend>
-                <div class="col-sm-10">
+                <legend class="col-form-label col-sm-4 pt-0">How many print colours:</legend>
+                <div class="col-sm-8">
                   <div class="form-check custom-control-inline">
                     <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
                     <label class="form-check-label" for="gridRadios1">
@@ -79,8 +82,10 @@
             <div class="form-group">
               <textarea class="form-control" id="message-text" placeholder="Special Notes"></textarea>
             </div>
-            <div class="form-group text-right">
-              <button type="button" class="btn btn-primary">Send</button>
+            <div class="form-group ">
+              <div class="input-group-append text-right">
+                <button class="btn btn-danger">send</button>
+              </div>
             </div>
           </form>
         </div>
