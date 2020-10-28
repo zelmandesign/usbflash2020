@@ -2,47 +2,91 @@
   @include('partials.page-header')
 
   <div class="container">
-    <div class="row">
+    <div class="row single-prod-top">
       <div class="col-md-7">
         <img src="@field('prod_hero_image', 'url')" alt="@field('prod_hero_image', 'alt')" class="img-fluid lozad prod-img-bg mb-4" />
 
-        @if(have_rows('prod_thumbs')) 
+        @hasfield('prod_thumbs')
           <div class="row">
-            @while(have_rows('prod_thumbs')) @php(the_row('prod_thumbs'))
+            @fields('prod_thumbs')
               <div class="col">
                 <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" class="img-fluid lozad prod-img-bg" />
               </div>
-            @endwhile
+            @endfields
           </div>
-        @endif
+        @endfield
 
       </div>
-      <div class="col-md">
-        <h1 class="entry-title">
+      <div class="col-md pl-md-5">
+        <h1 class="entry-title mb-4 mt-3">
           {!! $title !!}
         </h1>
-        <div class="mb-3">
+        <div class="mb-4">
           @hasfield('prod_short_description')
             @field('prod_short_description')
           @endfield
         </div>
 
-        @if(have_rows('paragraphs_&_icons')) 
-          @while(have_rows('paragraphs_&_icons')) @php(the_row('paragraphs_&_icons'))
+        @hasfield('paragraphs_&_icons')
+          @fields('paragraphs_&_icons')
             <div class="row mb-4">
-              <div class="col-2 d-flex align-items-center">
-                <img src="@sub('icon', 'url')" alt="@sub('icon', 'alt')" class="img-fluid lozad" />  
+              <div class="col-2">
+                <img src="@sub('icon', 'url')" alt="@sub('icon', 'alt')" class="img-fluid lozad mt-1" />  
               </div>
               <div class="col">
                 @sub('verbiage')
               </div>
             </div>
-          @endwhile
-        @endif
+          @endfields
+        @endfield
 
         @include('partials.product.modal')
-
       </div>
+    </div>
+
+    <div class="row single-prod-bottom">
+      <div class="col-md-5">
+        <div class="hero-heading">
+          @field('product_subheading')
+        </div>
+        @field('main_product_description')
+        @hasfield('show_product_options')
+          <div class="prod-options-title mb-4 mt-5">
+            @field('prod_options_title')
+          </div>
+
+          @hasfield('prod_options')
+            <div class="option-wrapper">
+              @fields('prod_options')
+                <div class="option d-flex justify-content-center align-items-center mr-3 mb-4">
+                  @sub('option')
+                </div>
+              @endfields
+            </div>
+          @endfield
+
+        @endfield
+
+        <div class="prod-colors">
+          <div class="prod-options-title mt-2">
+            Standard colours
+          </div>
+          <div class="colors">
+            @if($colorsProd)
+              @foreach ($colorsProd as $color)
+                <div class="color {{ $color }} mr-2 mt-3"></div>
+              @endforeach
+            @endif
+          </div>
+          <small>Pantone match available on 500+</small>
+        </div>
+      </div>
+
+      @hasfield('prod_icons')
+        <div class="col-md offset-1 prod-img-bg">
+          
+        </div>
+      @endfield
     </div>
   </div>
 

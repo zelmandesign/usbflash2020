@@ -65,21 +65,113 @@
 .usb-product {
   font-weight: 300;
   color: #808080;
+  line-height: 1.65rem;
 
   .entry-title {
     font-weight: bold;
     font-size: 25px;
-    color: #3c3c3c;
+    color: $dark-heading;
   }
 
   b {
-    color: #3c3c3c;
+    color: $dark-heading;
     font-size: 17px;
     font-weight: bold;
+    margin-bottom: 5px;
   }
 
   .prod-img-bg {
     background-color: #f6f7f9;
+  }
+
+  .single-prod-top {
+    margin-bottom: 145px;
+  }
+
+  .hero-heading {
+    color: $dark-heading;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 2.25rem;
+  }
+
+  .prod-options-title {
+    font-size: 17px;
+    color: $dark-heading;
+    font-weight: 600;
+  }
+
+  .option-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .option {
+      color: #fff;
+      background-color: $ligh-blue;
+      border-color: $ligh-blue;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: bold;
+      width: 100px;
+      height: 46px;
+    }
+  }
+
+  .prod-colors {
+    .colors {
+      .color {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        border-radius: 50%;
+        border: 1px solid #85988f;
+      }
+
+      .Black {
+        background-color: #242323;
+      }
+
+      .Red {
+        background-color: #d11f2d;
+      }
+
+      .Yellow {
+        background-color: #e1c341;
+      }
+
+      .Green {
+        background-color: #009b2a;
+      }
+
+      .White {
+        background-color: #fff;
+      }
+
+      .Pink {
+        background-color: #ffacf2;
+      }
+
+      .Purple {
+        background-color: #bc34ba;
+      }
+
+      .Brown {
+        background-color: #69451b;
+      }
+
+      .Silver {
+        background-color: #c0c0bf;
+      }
+
+      .Blue {
+        background-color: #0085cf;
+      }
+
+      .Orange {
+        background-color: #f9812a;
+      }
+    }
   }
 }
 
@@ -89,7 +181,7 @@
 
 .modal-wrapper {
   .sub {
-    color: #3c3c3c;
+    color: $dark-heading;
     font-size: 18px;
     font-weight: bold;
   }
@@ -105,7 +197,8 @@
   }
 
   .input-group {
-    width: 267px;
+    max-width: 267px;
+    margin-top: -5px;
 
     .form-control {
       font-size: 14px;
@@ -134,14 +227,28 @@
       border-radius: 0 10px 10px 0;
       font-size: 13px;
       font-weight: bold;
-      padding: 0.75rem 4rem;
+      padding: 0.5rem 4rem;
     }
+  }
+
+  .btn-danger {
+    color: #fff;
+    background-color: $ligh-blue;
+    border-color: $ligh-blue;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0.75rem 3.25rem;
   }
 }
 
 .modal-dialog {
   max-width: 832px;
   margin: 1.75rem auto;
+  color: #445663;
+
+  .modal-content {
+    border-radius: 0.5rem;
+  }
 
   .modal-header {
     display: block;
@@ -151,15 +258,19 @@
   .modal-title {
     font-size: 45px;
     font-weight: bold;
-    color: #3c3c3c;
+    color: $dark-heading;
   }
 
   .modal-body {
-    padding: 0 75px 75px 75px;
+    padding: 0 75px 55px 75px;
 
     .modal-hero-text {
       padding: 0 30px;
       margin-bottom: 40px;
     }
+  }
+
+  .form-group {
+    margin-bottom: 1.8rem;
   }
 }

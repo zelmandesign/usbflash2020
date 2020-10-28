@@ -7,11 +7,20 @@
 
       @php 
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        $args = array('posts_per_page' => 9, 'paged' => $paged, 'post_type' => 'gadgets-product' );
-        query_posts($args); 
+        $args = array(
+          'posts_per_page' => 12, 
+          'paged' => $paged, 
+          'post_type' => 'gadgets-product'
+        );
+        query_posts($args);
+
+        $bobo = count(query_posts($args));
+
+        if($paged = 1) {
+          $display = 1;
+        }
+        
       @endphp
-
-
 
       <div class="row">
         <div class="col-md-2">
@@ -21,7 +30,7 @@
           filter products
         </div>
         <div class="col-md-3 offset-4">
-          Displaying 1-6 of 6 results
+        Displaying {{ $bobo }} of {{ $gadgetsCount }} results
         </div>
         <div class="col-md-1 text-right bg-danger">
           {{ the_posts_pagination( array(
@@ -34,25 +43,20 @@
       </div>
 
       <hr>
-      
 
       @if (!have_posts())
         <div class="alert alert-warning">
           {{ __('Sorry, no products were found.', 'sage') }}
         </div>
       @endif
-  
+      
       <div class="row mb-4 product-list">
-        @while (have_posts()) @php the_post() @endphp
+        @while(have_posts()) @php(the_post())
           @include('partials.product.single-tax')
         @endwhile
       </div>
   
   </div>
-
-
-  
-
 
 @endsection
 

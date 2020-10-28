@@ -1,4 +1,4 @@
-<div class="modal-wrapper">
+<div class="modal-wrapper mt-5">
   <div class="sub mb-4">how many do you need?</div>
   <div class="input-group mb-3">
     <input type="text" class="form-control" id="qty-input" placeholder="ex. 100" aria-label="ex. 100" aria-describedby="basic-addon2" > 
@@ -8,7 +8,7 @@
   </div>
 
   <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <div class="row">
@@ -27,9 +27,9 @@
          
           <form>
             <div class="form-group row">
-              <label for="recipient-name" class="col-sm-2 col-form-label">Quantity</label>
-              <div class="col-sm-10">
-                <div class="input-group mb-3">
+              <label for="recipient-name" class="col-sm-4 col-form-label">Quantity</label>
+              <div class="col-sm-8">
+                <div class="input-group">
                   <input type="text" class="form-control" id="qty" placeholder="ex. 100" required> 
                   <div class="qty-btn-like">QTY</div>
                 </div>
@@ -82,10 +82,8 @@
             <div class="form-group">
               <textarea class="form-control" id="message-text" placeholder="Special Notes"></textarea>
             </div>
-            <div class="form-group ">
-              <div class="input-group-append text-right">
-                <button class="btn btn-danger">send</button>
-              </div>
+            <div class="form-group text-right">
+              <button class="btn btn-danger">send</button>
             </div>
           </form>
         </div>

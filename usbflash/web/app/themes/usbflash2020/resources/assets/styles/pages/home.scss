@@ -62,13 +62,13 @@
   .text-bold {
     font-size: 17px;
     font-weight: bold;
-    color: #3c3c3c;
+    color: $dark-heading;
     margin-bottom: 5px;
   }
 }
 
 .home-spotlight {
-  color: #3c3c3c;
+  color: $dark-heading;
   margin-bottom: 150px;
 
   .splat-wrapper {
@@ -99,7 +99,7 @@
     font-size: 13px;
     border: 3px solid $ligh-blue;
     padding: 0.5rem 1.5rem;
-    color: #3c3c3c;
+    color: $dark-heading;
 
     &:hover {
       background-color: $ligh-blue;
@@ -162,7 +162,7 @@
   .text-bold {
     //font-size: 17px;
     font-weight: bold;
-    //color: #3c3c3c;
+    //color: $dark-heading;
     //margin-bottom: 5px;
   }
 
