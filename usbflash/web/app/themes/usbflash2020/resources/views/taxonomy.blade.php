@@ -56,14 +56,6 @@
         {{ __('Sorry, no products were found.', 'sage') }}
       </div>
     @endif
-
-    {{ the_posts_pagination( array(
-      'screen_reader_text' => ' ', 
-      'prev_text'          => ' ',
-      'next_text'          => ' ',
-      'before_page_number' => ' ',
-      'after_page_number'  => ' ',
-    )) }}
     
     <div class="row mb-4 product-list">
       @while (have_posts()) @php the_post() @endphp
