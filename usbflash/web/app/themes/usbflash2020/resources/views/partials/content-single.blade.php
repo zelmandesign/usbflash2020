@@ -66,7 +66,8 @@
           @endfield
 
         @endfield
-
+        
+        @hasfield('colors')
         <div class="prod-colors">
           <div class="prod-options-title mt-2">
             Standard colours
@@ -80,11 +81,55 @@
           </div>
           <small>Pantone match available on 500+</small>
         </div>
+        @endfield
+
       </div>
 
       @hasfield('prod_icons')
-        <div class="col-md offset-1 prod-img-bg">
-          
+        <div class="col-md offset-md-1">
+          @fields('prod_icons')
+            <div class="icons-wrapper prod-img-bg">
+              <div class="row mb-5">
+                <div class="col text-center">
+                  <img src="@asset('images/Minimum-Order.svg')" alt="">
+                  <div class="prod-options-title mt-2">Min Order</div>
+                  <small>@sub('min_order')</small>
+                </div>  
+                <div class="col text-center">
+                  <img src="@asset('images/Leadtime-Icon.svg')" alt="">
+                  <div class="prod-options-title mt-2">Lead-time</div>
+                  <small>@sub('lead_time')</small>
+                </div>  
+              </div>
+
+              <div class="row mb-5">
+                <div class="col text-center">
+                  <img src="@asset('images/Print-Area-Icon.svg')" alt="">
+                  <div class="prod-options-title mt-2">Print area</div>
+                  <small>@sub('print_area')</small>
+                </div>  
+                <div class="col text-center">
+                  <img src="@asset('images/Dimensions-Icon.svg')" alt="">
+                  <div class="prod-options-title mt-2">Dimensions</div>
+                  <small>@sub('dimensions')</small>
+                </div>  
+              </div>
+
+              <div class="row">
+                <div class="col text-center">
+                  <img src="@asset('images/Branding-icon.svg')" alt="">
+                  <div class="prod-options-title mt-2">Print Method</div>
+                  <small>@sub('print_method')</small>
+                </div>  
+                <div class="col text-center">
+                  <img src="@asset('images/Artwork-Guidelines-Download.svg')" alt="">
+                  <div class="prod-options-title mt-2">Artwork</div>
+                  <small>@sub('artwork')</small>
+                </div>  
+              </div>
+              
+            </div>
+          @endfields
         </div>
       @endfield
     </div>

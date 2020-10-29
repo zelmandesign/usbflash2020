@@ -1,6 +1,6 @@
 <div class="col-md-4 col-sm-6 mb-4">
   <a href="{{ get_permalink() }}" class="...">
-    <img src="@asset('images/home_prod_test.png')" alt="" class="img-fluid">
+    <img src="@field('prod_hero_image', 'url', get_the_ID())" alt="@field('prod_hero_image', 'alt', get_the_ID())" class="img-fluid">
     <div class="prod-name">@title</div>
   </a>
 
