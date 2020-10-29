@@ -5,9 +5,9 @@
   </a>
 
   @if (get_post_type( get_the_ID() ) == "usb-product")
-    {{ $post_terms = get_the_terms(get_the_ID(), 'usb-category') }}
+    {{ $post_terms = get_the_terms(get_the_ID(), 'usb_product_tag') }}
   @elseif (get_post_type( get_the_ID() ) == "gadgets-product")
-    {{ $post_terms = get_the_terms(get_the_ID(), 'gadgets-category') }}
+    {{ $post_terms = get_the_terms(get_the_ID(), 'tech_product_tag') }}
   @endif
 
   <div class="category-name">{{ $post_terms[0]->name }}</div>

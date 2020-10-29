@@ -35,7 +35,7 @@ function register_usb_drives_post_type()
             'supports' => array( 'title', 'editor', 'thumbnail', 'post-formats', 'custom-fields' , 'excerpt' ),
             'hierarchical' => false,
             'has_archive' => 'usb',
-            'taxonomies' => array('usb-category'),
+            'taxonomies' => array('usb-category', 'product_tag'),
             'rewrite' => array( 'slug' => 'usb', 'hierarchical' => true, 'with_front' => false )
         )
     );
@@ -45,7 +45,22 @@ function register_usb_drives_post_type()
                 'name' => 'USB Sticks Categories',
                 'menu_name' => 'USB Sticks Categories',
                 'singular_name' => 'USB Sticks Category',
-                'all_items' => 'All Categories'
+                'all_items' => 'All Categories',
+            ),
+            'public' => true,
+            'hierarchical' => true,
+            'show_ui' => true
+        )
+    );
+    register_taxonomy( 'usb_product_tag', array('usb-product'),
+        array(
+            'labels' => array(
+                'name' => 'USB Tags',
+                'menu_name' => 'USB Tags',
+                'singular_name' => 'USB Tag',
+                'all_items' => 'All USB Tags',
+                'update_item' => 'Update Tag',
+                'add_new_item' => 'Add New Tag',
             ),
             'public' => true,
             'hierarchical' => true,
@@ -76,7 +91,7 @@ function register_gadgets_post_type()
             'supports' => array( 'title', 'editor', 'thumbnail', 'post-formats', 'custom-fields', 'excerpt' ),
             'hierarchical' => false,
             'has_archive' => 'gadgets',
-            'taxonomies' => array('gadgets-category'),
+            'taxonomies' => array('gadgets-category', 'product_tag'),
             'rewrite' => array( 'slug' => 'gadgets', 'hierarchical' => true, 'with_front' => false )
         )
     );
@@ -88,6 +103,21 @@ function register_gadgets_post_type()
                 'menu_name' => 'Tech Gifts Categories',
                 'singular_name' => 'Tech Gifts Category',
                 'all_items' => 'All Categories'
+            ),
+            'public' => true,
+            'hierarchical' => true,
+            'show_ui' => true
+        )
+    );
+    register_taxonomy( 'tech_product_tag', array('gadgets-product'),
+        array(
+            'labels' => array(
+                'name' => 'Tech Tags',
+                'menu_name' => 'Tech Tags',
+                'singular_name' => 'Tech Tag',
+                'all_items' => 'All Tech Tags',
+                'update_item' => 'Update Tag',
+                'add_new_item' => 'Add New Tag',
             ),
             'public' => true,
             'hierarchical' => true,

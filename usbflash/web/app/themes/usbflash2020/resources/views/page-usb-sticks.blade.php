@@ -32,7 +32,11 @@
             <select class="form-control form-control-sm" onchange="window.location=this.value">
               <option selected value="">+ Filter Products</option>
               @foreach ($usbTerms as $item)
-                <option value="/usb-category/{{ $item->slug }}">{{ $item->name }}</option>
+                @if($item->name == "Featured")
+                  return false
+                @else 
+                  <option value="/usb-category/{{ $item->slug }}">{{ $item->name }}</option>
+                @endif
               @endforeach
             </select>
           @endif

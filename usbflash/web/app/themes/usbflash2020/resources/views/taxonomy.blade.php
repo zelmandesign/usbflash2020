@@ -20,19 +20,31 @@
       </div>
       <div class="col-md-2">
         @if (get_post_type( get_the_ID() ) == "usb-product")
-          <select class="form-control form-control-sm" onchange="window.location=this.value">
-            <option selected value="">+ Filter Products</option>
-            @foreach ($usbTerms as $item)
-              <option value="/usb-category/{{ $item->slug }}">{{ $item->name }}</option>
-            @endforeach
-          </select>
+          @if($usbTerms)
+            <select class="form-control form-control-sm" onchange="window.location=this.value">
+              <option selected value="">+ Filter Products</option>
+              @foreach ($usbTerms as $item)
+                @if($item->name == "Featured")
+                  return false
+                @else 
+                  <option value="/usb-category/{{ $item->slug }}">{{ $item->name }}</option>
+                @endif
+              @endforeach
+            </select>
+          @endif
         @elseif (get_post_type( get_the_ID() ) == "gadgets-product")
-          <select class="form-control form-control-sm" onchange="window.location=this.value">
-            <option selected value="">+ Filter Products</option>
-            @foreach ($gadgetsTerms as $item)
-              <option value="/gadgets-category/{{ $item->slug }}">{{ $item->name }}</option>
-            @endforeach
-          </select>
+          @if($gadgetsTerms)
+            <select class="form-control form-control-sm" onchange="window.location=this.value">
+              <option selected value="">+ Filter Products</option>
+              @foreach ($gadgetsTerms as $item)
+                @if($item->name == "Featured")
+                  return false
+                @else 
+                  <option value="/gadgets-category/{{ $item->slug }}">{{ $item->name }}</option>
+                @endif
+              @endforeach
+            </select>
+          @endif
         @endif
       </div>
       <div class="col-md-3 offset-md-4 prod-res">

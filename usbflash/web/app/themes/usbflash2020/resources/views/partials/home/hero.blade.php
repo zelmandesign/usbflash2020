@@ -1,6 +1,6 @@
 <section class="home-hero">
   <div class="bg-wrapper" style="background: url('@field('home_hero_background_image')') center center no-repeat;">
-    @include('partials.home.header');
+    @include('partials.header')
     
     <div class="container">
       <div class="hero-wrapper d-flex align-items-center">
