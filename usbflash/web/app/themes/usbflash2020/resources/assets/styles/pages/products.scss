@@ -139,59 +139,57 @@ hr {
     }
   }
 
-  .prod-colors {
-    .colors {
-      .color {
-        width: 25px;
-        height: 25px;
-        display: inline-block;
-        border-radius: 50%;
-        border: 1px solid #85988f;
-      }
+  .colors {
+    .color {
+      width: 25px;
+      height: 25px;
+      display: inline-block;
+      border-radius: 50%;
+      border: 1px solid #85988f;
+    }
 
-      .Black {
-        background-color: #242323;
-      }
+    .Black {
+      background-color: #242323;
+    }
 
-      .Red {
-        background-color: #d11f2d;
-      }
+    .Red {
+      background-color: #d11f2d;
+    }
 
-      .Yellow {
-        background-color: #e1c341;
-      }
+    .Yellow {
+      background-color: #e1c341;
+    }
 
-      .Green {
-        background-color: #009b2a;
-      }
+    .Green {
+      background-color: #009b2a;
+    }
 
-      .White {
-        background-color: #fff;
-      }
+    .White {
+      background-color: #fff;
+    }
 
-      .Pink {
-        background-color: #ffacf2;
-      }
+    .Pink {
+      background-color: #ffacf2;
+    }
 
-      .Purple {
-        background-color: #bc34ba;
-      }
+    .Purple {
+      background-color: #bc34ba;
+    }
 
-      .Brown {
-        background-color: #69451b;
-      }
+    .Brown {
+      background-color: #69451b;
+    }
 
-      .Silver {
-        background-color: #c0c0bf;
-      }
+    .Silver {
+      background-color: #c0c0bf;
+    }
 
-      .Blue {
-        background-color: #0085cf;
-      }
+    .Blue {
+      background-color: #0085cf;
+    }
 
-      .Orange {
-        background-color: #f9812a;
-      }
+    .Orange {
+      background-color: #f9812a;
     }
   }
 }
