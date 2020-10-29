@@ -47,6 +47,10 @@ hr {
   }
 }
 
+.prod-img-bg {
+  background-color: #f6f7f9;
+}
+
 .product-list {
   a {
     color: $dark-heading;
@@ -68,13 +72,13 @@ hr {
   .prod-glass {
     position: absolute;
     bottom: 0;
-    right: 12.5%;
+    right: 8.5%;
   }
 
   .bt-line-prod {
     background-color: #e5e5e5;
     height: 1px;
-    width: 80%;
+    width: 85%;
   }
 }
 
@@ -99,10 +103,6 @@ hr {
     font-size: 17px;
     font-weight: bold;
     margin-bottom: 5px;
-  }
-
-  .prod-img-bg {
-    background-color: #f6f7f9;
   }
 
   .single-prod-top {

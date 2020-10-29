@@ -5,20 +5,26 @@
 .home-hero {
   background: rgb(40, 50, 59) !important;
   background: linear-gradient(90deg, rgba(40, 50, 59, 1) 0%, rgba(50, 66, 79, 1) 100%) !important;
+  font-weight: 300;
 
   .bg-wrapper {
-    min-height: 55vh;
+    min-height: 52vh;
   }
 
   .hero-wrapper {
     max-width: 550px;
-    min-height: 55vh;
+    min-height: 52vh;
     color: #fff;
   }
 
   #typed {
     font-size: 100px;
     font-weight: bold;
+    min-height: 150px;
+  }
+
+  .hero-heading {
+    font-weight: 600;
   }
 
   .hero-text {
@@ -57,11 +63,17 @@
 
 .home-browse {
   color: #b5b5b5;
-  height: 50vh;
+  min-height: 40vh;
+  margin-top: 100px;
+  font-weight: 300;
+
+  .hero-heading {
+    margin-bottom: -5px;
+  }
 
   .text-bold {
     font-size: 17px;
-    font-weight: bold;
+    font-weight: 600;
     color: $dark-heading;
     margin-bottom: 5px;
   }
@@ -69,7 +81,9 @@
 
 .home-spotlight {
   color: $dark-heading;
-  margin-bottom: 150px;
+  margin-bottom: 0px;
+  min-height: 752px;
+  background-position: absolute top -100px !important;
 
   .splat-wrapper {
     position: relative;
@@ -90,9 +104,23 @@
     }
   }
 
+  .text-wrapper {
+    max-width: 492px;
+
+    .hero-heading {
+      font-size: 18px;
+      margin-bottom: -5px;
+    }
+  }
+
   .home-spotlight-text {
     min-height: 40vh;
     display: flex;
+    font-weight: 300;
+  }
+
+  .sub-heading {
+    font-weight: 600;
   }
 
   .btn-outline-danger {
@@ -109,9 +137,15 @@
 }
 
 .home-featured {
+  margin-top: -50px;
   margin-bottom: 100px;
 
+  .hero-heading {
+    font-size: 18.5px;
+  }
+
   .sub-heading {
+    margin-top: -5px;
     font-size: 40px;
   }
 
@@ -123,28 +157,35 @@
 }
 
 .home-work-with-us {
-  height: 45vh;
+  min-height: 631px;
   color: #fff;
+  font-weight: 300;
 
   .hero-heading {
     color: #71c299;
+    font-size: 20px;
+    font-weight: bold;
   }
 
   .sub-heading {
     font-size: 40px;
     color: #fff;
+    font-weight: 600;
+    line-height: 2.5rem;
+    margin-bottom: 30px;
   }
 
   .text-bold {
     font-size: 18px;
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 600;
   }
 }
 
 .home-help {
   min-height: 55vh;
   color: #fff;
+  font-weight: 300;
   background-color: #70c399 !important;
 
   .home-help-wrapper {
@@ -155,8 +196,9 @@
   .sub-heading {
     font-size: 60px;
     color: #fff;
-    font-weight: 300;
-    margin-bottom: 10px;
+    font-weight: 200;
+    margin-bottom: 30px;
+    line-height: 3.5rem;
   }
 
   .text-bold {

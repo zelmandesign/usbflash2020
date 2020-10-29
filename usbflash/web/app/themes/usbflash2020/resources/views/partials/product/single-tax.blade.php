@@ -1,6 +1,6 @@
-<div class="col-md-4 col-sm-6 mb-4">
-  <a href="{{ get_permalink() }}" class="...">
-    <img src="@field('prod_hero_image', 'url', get_the_ID())" alt="@field('prod_hero_image', 'alt', get_the_ID())" class="img-fluid">
+<div class="col-md-4 col-sm-6 mb-4 ">
+  <a href="{{ get_permalink() }}">
+    <img src="@field('prod_hero_image', 'url', get_the_ID())" alt="@field('prod_hero_image', 'alt', get_the_ID())" class="img-fluid prod-img-bg">
     <div class="prod-name">@title</div>
   </a>
 
@@ -11,6 +11,6 @@
   @endif
 
   <div class="category-name">{{ $post_terms[0]->name }}</div>
-    <img src="@asset('images/Magnifying-Glass-Icon.svg')" alt="" width="30" height="30" class="prod-glass">
+    <a href="{{ get_permalink() }}"><img src="@asset('images/Magnifying-Glass-Icon.svg')" alt="" width="30" height="30" class="prod-glass"></a>
   <div class="bt-line-prod"></div>
 </div>

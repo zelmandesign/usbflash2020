@@ -10,7 +10,7 @@
             <p>we create.</p>
             <p>we print...</p>
           </div>
-          <span id="typed"></span>
+          <div id="typed"></div>
 
           <div class="hero-heading">
             The UK's leading supplier of promotional

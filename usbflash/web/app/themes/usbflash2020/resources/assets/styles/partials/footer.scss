@@ -1,8 +1,10 @@
 .content-info {
   background-color: #313a41;
-  color: $grey-nav;
-  height: 50vh;
+  min-height: 50vh;
   margin-top: 200px;
+  font-size: 14px;
+  color: #f0f0f0;
+  font-weight: 300;
 
   .container {
     max-width: 1000px;
@@ -11,23 +13,24 @@
   strong {
     font-size: 15px;
     color: #fff;
+    font-weight: 600;
   }
 
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
+  }
 
-    li {
-      a {
-        padding: 0;
-        margin: 0;
-        text-transform: uppercase;
-        color: $grey-nav;
+  .navbar-nav .nav-link, .navbar-nav .menu-item {
+    padding: 0;
 
-        &:hover {
-          color: #fff;
-        }
+    a {
+      color: #f0f0f0;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
@@ -64,6 +67,10 @@
 
   .social-media {
     margin: 20px 0;
+
+    a {
+      margin-right: 10px;
+    }
   }
 
   @include media-breakpoint-down(md) {
