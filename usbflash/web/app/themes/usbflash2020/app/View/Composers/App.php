@@ -24,7 +24,7 @@ class App extends Composer
     {
         return [
             'siteName' => $this->siteName(),
-            'boboFruit' => $this->boboFruit(),
+            'pagiNation' => $this->pagiNation()
         ];
     }
 
@@ -37,38 +37,19 @@ class App extends Composer
     {
         return get_bloginfo('name', 'display');
     }
-
-    /**
-     * Gadgets Query
-     *
-     * @return string
-     */
-    public function fooBar()
-    {
-        $args = array(
-            'post_type' => 'gadgets-product',
-            'posts_per_page'=>'10',
-        );
-        $result = new \WP_Query($args);
-
-        $data = array_map(
-            function ($post) {
-                return array(
-                    'title'   => $post->post_title,
-                );
-            },
-            $result->posts
-        );
-        return $data;
-    }
-
+    
     /**
      * Returns the site name.
      *
-     * @return string
+     * @return void
      */
-    public function boboFruit()
+    public function pagiNation()
     {
-        return 'tomek';
+        global $wp_query;
+        $paged = !empty($wp_query->query_vars['paged']) ? $wp_query->query_vars['paged'] : 1;
+        $prev_posts = ( $paged - 1 ) * $wp_query->query_vars['posts_per_page'];
+        $from = 1 + $prev_posts;
+        $to = count($wp_query->posts) + $prev_posts;
+        $of = $wp_query->found_posts;
     }
 }

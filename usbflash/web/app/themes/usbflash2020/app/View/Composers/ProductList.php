@@ -15,7 +15,8 @@ class ProductList extends Composer
         'page-tech-gifts',
         'page-usb-sticks',
         'partials.product.single',
-        'partials.content-single'
+        'partials.content-single',
+        'taxonomy'
     ];
 
     /**
@@ -29,7 +30,8 @@ class ProductList extends Composer
             'usbdrivesQuery' => $this->usbdrivesQuery(),
             'gadgetsQuery' => $this->gadgetsQuery(),
             'colorsProd' => $this->colorsProd(),
-            'gadgetsCount' => $this->gadgetsCount()
+            'gadgetsTerms' => $this->gadgetsTerms(),
+            'usbTerms' => $this->usbTerms(),
         ];
     }
 
@@ -58,22 +60,6 @@ class ProductList extends Composer
             },
             $result->posts
         );
-        return $data;
-    }
-
-    /**
-     * Gadgets Product Count
-     *
-     * @return string
-     */
-    public function gadgetsCount()
-    {
-        $args = array(
-            'post_type' => 'gadgets-product',
-        );
-        $result = new \WP_Query($args);
-
-        $data = $result->found_posts;
         return $data;
     }
 
@@ -128,6 +114,34 @@ class ProductList extends Composer
     public function colorsProd()
     {
         $data = get_field('colors');
+        return $data;
+    }
+
+    /**
+     * Select Category Gadgets
+     *
+     * @return array
+     */
+    public function gadgetsTerms()
+    {
+        $data = get_terms(array(
+            'taxonomy' => 'gadgets-category',
+            'hide_empty' => false,
+        ));
+        return $data;
+    }
+
+    /**
+     * Select Category USB
+     *
+     * @return array
+     */
+    public function usbTerms()
+    {
+        $data = get_terms(array(
+            'taxonomy' => 'usb-category',
+            'hide_empty' => false,
+        ));
         return $data;
     }
 }

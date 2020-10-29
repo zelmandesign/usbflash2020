@@ -5,39 +5,48 @@
 
   <div class="container">
 
-      @php 
+      @php
+        $post_type = 'gadgets-product';
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $args = array(
           'posts_per_page' => 12, 
           'paged' => $paged, 
-          'post_type' => 'gadgets-product'
+          'post_type' => $post_type
         );
         query_posts($args);
 
-        $bobo = count(query_posts($args));
-
-        if($paged = 1) {
-          $display = 1;
-        }
-        
+        global $wp_query;
+        $paged = !empty($wp_query->query_vars['paged']) ? $wp_query->query_vars['paged'] : 1;
+        $prev_posts = ( $paged - 1 ) * $wp_query->query_vars['posts_per_page'];
+        $from = 1 + $prev_posts;
+        $to = count($wp_query->posts) + $prev_posts;
+        $of = $wp_query->found_posts;
       @endphp
 
-      <div class="row">
+      <div class="row prod-pagination">
         <div class="col-md-2">
           All Products
         </div>
         <div class="col-md-2">
-          filter products
+          @if($gadgetsTerms)
+            <select class="form-control form-control-sm" onchange="window.location=this.value">
+              <option selected value="">+ Filter Products</option>
+              @foreach ($gadgetsTerms as $item)
+                <option value="/gadgets-category/{{ $item->slug }}">{{ $item->name }}</option>
+              @endforeach
+            </select>
+          @endif
         </div>
-        <div class="col-md-3 offset-4">
-        Displaying {{ $bobo }} of {{ $gadgetsCount }} results
+        <div class="col-md-3 offset-md-4 prod-res">
+          Displaying {{ $from }}-{{ $to }} of {{ $of }} results
         </div>
-        <div class="col-md-1 text-right bg-danger">
+        <div class="col-md-1 text-right">
           {{ the_posts_pagination( array(
             'screen_reader_text' => ' ', 
             'prev_text'          => ' ',
             'next_text'          => ' ',
-            'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( '', 'nieuwedruk' ) . ' </span>',
+            'before_page_number' => ' ',
+            'after_page_number'  => ' ',
           )) }}
         </div>
       </div>
