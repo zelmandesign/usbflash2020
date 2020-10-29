@@ -19,30 +19,26 @@ hr {
   font-weight: 300;
 }
 
-.prod-pagination {
-  .pagination {
-    .nav-links {
-      .next,
-      .prev {
-        display: none !important;
-      }
+.nav-links {
+  .next,
+  .prev {
+    display: none !important;
+  }
 
-      .page-numbers {
-        width: 28px;
-        height: 20px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid #ddd;
-        color: #9a9a9a;
-        font-size: 12px;
-      }
+  .page-numbers {
+    width: 28px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    color: #9a9a9a;
+    font-size: 12px;
+  }
 
-      .current {
-        background-color: #ebebeb;
-        color: $dark-heading;
-      }
-    }
+  .current {
+    background-color: #ebebeb;
+    color: $dark-heading;
   }
 }
 
