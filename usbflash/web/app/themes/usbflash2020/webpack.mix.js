@@ -22,6 +22,7 @@ mix
   .sass('resources/assets/styles/app.scss', 'styles')
   .sass('resources/assets/styles/editor.scss', 'styles')
   .purgeCss({
+    enabled:false,
     extend: { content: [path.join(__dirname, 'index.php')] },
     whitelist: require('purgecss-with-wordpress').whitelist,
     whitelistPatterns: require('purgecss-with-wordpress').whitelistPatterns,
