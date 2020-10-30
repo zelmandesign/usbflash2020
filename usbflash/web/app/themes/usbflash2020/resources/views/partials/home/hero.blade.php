@@ -1,36 +1,47 @@
 <section class="home-hero">
-  <div class="bg-wrapper" style="background: url('@field('home_hero_background_image')') center center no-repeat;">
+  <div class="bg-wrapper" style="background: url('@field('home_hero_background_image')') bottom center no-repeat;">
     @include('partials.header')
     
     <div class="container">
       <div class="hero-wrapper d-flex align-items-center">
         <div class="hero-head">
-          <div class="typed-strings">
-            <p>we brand.</p>
-            <p>we create.</p>
-            <p>we print...</p>
-          </div>
-          <div id="typed"></div>
+          @hasfield('hero_typed_text')
+            <div class="typed-strings">
+              @fields('hero_typed_text')
+              <p>@sub('paragraph')</p>
+              @endfields
+            </div>
+            <div id="typed"></div>
+          @endfield
 
-          <div class="hero-heading">
-            The UK's leading supplier of promotional
-            USB drives and branded tech
-          </div>
+          @hasfield('hero_heading')
+            <div class="hero-heading">
+              @field('hero_heading')
+            </div>
+          @endfield
           
-          <div class="hero-text">
-            We want your brand to stand out for the right reason and we think innovation is key. We live in a world dominated by technology, so what better way of promoting your company than with a branded usb stick or high tech promotional gadget.
-          </div>
+          @hasfield('hero_text')
+            <div class="hero-text">
+              @field('hero_text')
+            </div>
+          @endfield
           
-          <div class="hero-buttons">
-            <a href="" class="btn btn-danger mr-2">Explore Tech</a>
-            <a href="" class="btn btn-outline-danger">Explore USB Sticks</a>
-          </div>
+          @group('hero_buttons')
+            <div class="hero-buttons mb-5">
+              @hassub('link1')
+                <a href="@sub('link1')" class="btn btn-danger mr-2">@sub('button1_text')</a>
+              @endsub
+              @hassub('link2')
+                <a href="@sub('link2')" class="btn btn-outline-danger">@sub('button2_text')</a>
+              @endsub
+            </div>
+          @endgroup
           
         </div>
       </div>
 
-      <div class="d-flex justify-content-center">
-        <img src="@asset('images/chevron-down-white.gif')" alt="" width="95" height="95">
+      <div class="d-flex justify-content-center mt-5">
+        <img src="@asset('images/chevron-down-white.gif')" alt="" width="95" height="95" class="ml-2">
       </div>
       
     </div>

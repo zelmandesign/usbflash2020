@@ -1,94 +1,68 @@
 <section class="home-browse">
   <div class="container">
     <div class="text-center mt-5 mb-5">
-      <div class="hero-heading">Browse</div>
-      <div class="sub-heading">our products</div>
+      @hasfield('our_prod_heading')
+        <div class="hero-heading">@field('our_prod_heading')</div>
+      @endfield
+      @hasfield('our_prod_subheading')
+        <div class="sub-heading">@field('our_prod_subheading')</div>
+      @endfield
     </div>
 
-    <div class="row mb-5">
-      <div class="col-md">
-        <div class="row">
-          <div class="col-2"><img src="@asset('images/Branded-USB-Drive-Icon.svg')" alt=""></div>
-          <div class="col-9 pr-md-5">
-            <div class="text-bold">Branded USB sticks</div> 
-            Promotional USB drives in a range of memory sizes. Get your logo branded free of charge.
+    @hasfield('products')
+      <div class="row mb-md-5">
+        @fields('products')
+          <div class="col-md-4 mb-md-5 mb-3">
+            <div class="row mb-3 mb-md-0">
+              <div class="col-2"><img src="@sub('product_icon', 'url')" alt="@sub('product_icon', 'alt')"></div>
+              <div class="col-9 pr-md-5">
+                <div class="text-bold">@sub('product_name')</div> 
+                @sub('product_description')
+              </div>
+            </div>
           </div>
-        </div>
+        @endfields
       </div>
-      <div class="col-md">
-        <div class="row">
-          <div class="col-2"><img src="@asset('images/Branded-USB-Drive-Icon.svg')" alt=""></div>
-          <div class="col-9 pr-md-5">
-            <div class="text-bold">Wireless charging</div> 
-            Charge your mobile wirelessly with our brand new range of branded Wireless Chargers
-          </div>
-        </div>
-      </div>
-      <div class="col-md">
-        <div class="row">
-          <div class="col-2"><img src="@asset('images/Branded-USB-Drive-Icon.svg')" alt=""></div>
-          <div class="col-9 pr-md-5">
-            <div class="text-bold">Power Banks</div> 
-            Make sure your battery never dies again with our range of promotional power banks
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md">
-        <div class="row">
-          <div class="col-2"><img src="@asset('images/Branded-USB-Drive-Icon.svg')" alt=""></div>
-          <div class="col-9 pr-md-5">
-            <div class="text-bold">USB charging cables</div> 
-            Charge multiple devices with a single cable with our range of branded USB charging cables.
-          </div>
-        </div>
-      </div>
-      <div class="col-md">
-        <div class="row">
-          <div class="col-2"><img src="@asset('images/Branded-USB-Drive-Icon.svg')" alt=""></div>
-          <div class="col-9 pr-md-5">
-            <div class="text-bold">Webcam Covers</div> 
-            Get your brand right in front of the customer with our branded webcam covers.
-          </div>
-        </div>
-      </div>
-      <div class="col-md">
-        <div class="row">
-          <div class="col-2"><img src="@asset('images/Branded-USB-Drive-Icon.svg')" alt=""></div>
-          <div class="col-9 pr-md-5">
-            <div class="text-bold">Gadgets</div> 
-            A great range of promotional gadgets including selfie sticks, Bluetooth keyrings.
-          </div>
-        </div>
-      </div>
-    </div>
+    @endfield
   </div>
 </section>
 
-<section class="home-spotlight" style="background: url('@field('home_spotlight_bg_image')') center center no-repeat;">
-  <div class="container pt-md-5">
-    <div class="row">
-      <div class="col-md text-center">
-        <div class="splat-wrapper">
-          <img src="@asset('images/Hanger-USB-Drive-Open.png')" alt="" width="400" height="auto" class="home-product">
-          <img src="@asset('images/Featured-Promotional-Splat.svg')" alt="" width="820" height="513" class="splat-bg">
-        </div>
-      </div>
-      <div class="col-md home-spotlight-text d-flex align-items-center pt-md-5 pl-md-5">
-        <div class="text-wrapper pt-md-5 pl-md-5">
-          <div class="hero-heading">SPOTLIGHT</div>
-          <div class="sub-heading">Hanger USB Drive</div>
-          <div class="mt-2 mb-4">
-            These super sleek USB drives are manufactured using using zinc alloy giving them a premium look and feel. A large branding area means we can laser engrave or print your logo for everyone to see. A great promotional USB stick without the expensive price tag!
+@group('spotlight_product')
+  <section class="home-spotlight" style="background: url('@field('home_spotlight_bg_image')') center center no-repeat;">
+    <div class="container pt-md-5">
+      <div class="row">
+        @hassub('product_image')
+        <div class="col-md text-center">
+          <div class="splat-wrapper">
+            <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" width="400" height="auto" class="home-product">
+            <img src="@asset('images/Featured-Promotional-Splat.svg')" alt="" width="820" height="513" class="splat-bg">
           </div>
-          <div class="btn btn-outline-danger">More Info</div>
+        </div>
+        @endsub
+        <div class="col-md home-spotlight-text d-flex align-items-center pt-md-5 pl-md-5">
+          <div class="text-wrapper pt-md-5 pl-md-5">
+            @hassub('heading')
+              <div class="hero-heading">@sub('heading')</div>
+            @endsub
+            @hassub('product_name')
+              <div class="sub-heading">@sub('product_name')</div>
+            @endsub
+            @hassub('product_description')
+              <div class="mt-2 mb-4">
+                @sub('product_description')
+              </div>
+            @endsub
+            @group('button')
+              @hassub('link')
+                <a href="@sub('link')" class="btn btn-outline-danger">@sub('text')</a>
+              @endsub
+            @endgroup
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+@endgroup
 
 <section class="home-featured product-list">
   <div class="container">

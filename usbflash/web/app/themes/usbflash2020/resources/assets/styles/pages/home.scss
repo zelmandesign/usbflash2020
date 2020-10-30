@@ -8,19 +8,29 @@
   font-weight: 300;
 
   .bg-wrapper {
-    min-height: 52vh;
+    min-height: 800px;
   }
 
   .hero-wrapper {
     max-width: 550px;
-    min-height: 52vh;
+    min-height: 551px;
     color: #fff;
+
+    @include media-breakpoint-down(md) {
+      padding: 50px 0;
+    }
   }
 
   #typed {
     font-size: 100px;
     font-weight: bold;
     min-height: 150px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 65px;
+      font-weight: bold;
+      min-height: 100px;
+    }
   }
 
   .hero-heading {
