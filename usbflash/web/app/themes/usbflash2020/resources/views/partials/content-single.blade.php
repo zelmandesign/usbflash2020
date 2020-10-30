@@ -45,7 +45,7 @@
     </div>
 
     <div class="row single-prod-bottom">
-      <div class="col-md-5">
+      <div class="col-md-5 pb-4">
         <div class="hero-heading">
           @field('product_subheading')
         </div>

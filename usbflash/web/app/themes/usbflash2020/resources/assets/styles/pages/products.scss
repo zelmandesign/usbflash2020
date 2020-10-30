@@ -21,7 +21,8 @@ hr {
 
 .hero-prod-heading {
   font-size: 35px;
-  font-weight: bold;
+  font-weight: 600;
+  line-height: 2.5rem;
 }
 
 .hero-category {
@@ -35,7 +36,11 @@ hr {
   background: rgb(40, 50, 59) !important;
 
   .prod-bg-wrapper {
-    min-height: 40vh;
+    min-height: 600px;
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 60px;
+    }
   }
 }
 
@@ -44,6 +49,10 @@ hr {
 
   .hero-tax-wrapper {
     min-height: 30vh;
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 60px;
+    }
   }
 }
 
@@ -198,6 +207,10 @@ hr {
   .icons-wrapper {
     padding: 80px 110px 80px 60px;
 
+    @include media-breakpoint-down(md) {
+      padding: 40px 20px;
+    }
+
     small {
       font-weight: 300;
     }
@@ -292,6 +305,10 @@ hr {
 
   .modal-body {
     padding: 0 75px 55px 75px;
+
+    @include media-breakpoint-down(md) {
+      padding: 0 20px 0px 20px;
+    }
 
     .modal-hero-text {
       padding: 0 30px;

@@ -24,10 +24,10 @@
       @endphp
 
       <div class="row prod-pagination">
-        <div class="col-md-2">
+        <div class="col-md-2 mb-3">
           All Products
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 mb-3">
           @if($usbTerms)
             <select class="form-control form-control-sm" onchange="window.location=this.value">
               <option selected value="">+ Filter Products</option>
@@ -41,10 +41,10 @@
             </select>
           @endif
         </div>
-        <div class="col-md-3 offset-md-4 prod-res">
+        <div class="col-md-3 offset-md-4 prod-res mb-3">
           Displaying {{ $from }}-{{ $to }} of {{ $of }} results
         </div>
-        <div class="col-md-1 text-right">
+        <div class="col-md-1 text-right mb-3">
           {{ the_posts_pagination( array(
             'screen_reader_text' => ' ', 
             'prev_text'          => ' ',
