@@ -15,10 +15,10 @@
     @endphp
 
     <div class="row prod-pagination">
-      <div class="col-md-2 mb-3">
+      <div class="col-md-2 mb-3 mb-md-0">
         {{ single_cat_title() }}
       </div>
-      <div class="col-md-2 mb-3">
+      <div class="col-md-2 mb-3 mb-md-0">
         @if (get_post_type( get_the_ID() ) == "usb-product")
           @if($usbTerms)
             <select class="form-control form-control-sm" onchange="window.location=this.value">
@@ -47,10 +47,10 @@
           @endif
         @endif
       </div>
-      <div class="col-md-3 offset-md-4 prod-res mb-3">
+      <div class="col-md-3 offset-md-4 prod-res mb-3 mb-md-0">
         Displaying {{ $from }}-{{ $to }} of {{ $of }} results
       </div>
-      <div class="col-md-1 text-right mb-3">
+      <div class="col-md-1 text-right mb-3 mb-md-0">
         {{ the_posts_pagination( array(
           'screen_reader_text' => ' ', 
           'prev_text'          => ' ',
