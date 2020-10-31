@@ -39,7 +39,7 @@
             </form>
           </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 get-in-touch-wrapper">
           @hasfield('contact_heading')
             <div class="hero-heading mt-5 mt-md-0">
               @field('contact_heading')
