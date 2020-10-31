@@ -1,0 +1,66 @@
+/**
+ * Contact Form
+ **/
+
+.contact-form-wrapper {
+  border: 1px solid #ddd;
+
+  .form-title {
+    font-weight: 600;
+    font-size: 25px;
+    color: $dark-heading;
+    padding: 15px 25px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f0f0f0;
+  }
+
+  .form-inside {
+    padding: 20px 35px 15px 35px;
+
+    ::-webkit-input-placeholder {
+      font-weight: 300 !important;
+    }
+
+    .form-control {
+      border-radius: 0;
+    }
+
+    .btn-danger {
+      color: #fff;
+      background-color: $ligh-blue;
+      border-color: $ligh-blue;
+      font-size: 14px;
+      font-weight: 300;
+      padding: 0.5rem 1.75rem;
+
+      &:hover {
+        background-color: #70c299;
+        border-color: #70c299;
+      }
+    }
+  }
+}
+
+.get-in-touch {
+  font-weight: 300;
+  color: #32536b;
+
+  .hero-heading {
+    font-weight: 600;
+    font-size: 30px;
+    color: $dark-heading;
+  }
+
+  .text-bold {
+    font-weight: 600;
+    font-size: 17px;
+    color: $dark-heading;
+    margin-bottom: 5px;
+  }
+
+  a {
+    font-size: 15px;
+    font-weight: 600;
+    color: $ligh-blue;
+  }
+}

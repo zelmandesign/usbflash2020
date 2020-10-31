@@ -74,7 +74,7 @@ hr {
   .category-name {
     font-size: 13px;
     margin-bottom: 15px;
-    color: #2aa8cc;
+    color: $ligh-blue;
     text-transform: uppercase;
   }
 
@@ -260,6 +260,11 @@ hr {
       font-size: 13px;
       font-weight: bold;
       padding: 0 2.35rem;
+
+      &:hover {
+        background-color: #70c299;
+        border-color: #70c299;
+      }
     }
 
     .qty-btn-like {
@@ -280,6 +285,11 @@ hr {
     font-size: 13px;
     font-weight: bold;
     padding: 0.75rem 3.25rem;
+
+    &:hover {
+      background-color: #70c299;
+      border-color: #70c299;
+    }
   }
 }
 
@@ -315,8 +325,8 @@ hr {
       margin-bottom: 40px;
     }
   }
+}
 
-  .form-group {
-    margin-bottom: 1.8rem;
-  }
+.form-group {
+  margin-bottom: 1.8rem;
 }
