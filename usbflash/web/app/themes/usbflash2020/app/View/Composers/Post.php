@@ -16,6 +16,7 @@ class Post extends Composer
         'partials.content',
         'partials.content-*',
         'partials.hero-product',
+        'page-*',
     ];
 
     /**

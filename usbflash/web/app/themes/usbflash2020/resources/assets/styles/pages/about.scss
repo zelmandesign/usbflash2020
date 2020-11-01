@@ -1,0 +1,31 @@
+/**
+* About Page
+*/
+
+.about-us {
+  font-size: 14px;
+  font-weight: 300;
+  color: #32536b;
+
+  .heading {
+    font-size: 15px;
+    color: $ligh-blue;
+    font-weight: 600;
+  }
+
+  .subheading {
+    font-size: 60px;
+    font-weight: 600;
+    font-weight: 300;
+    line-height: 3.5rem;
+
+    .bold {
+      font-weight: 600;
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 15px;
+  }
+}

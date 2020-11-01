@@ -78,10 +78,15 @@
           <div class="text-bold mt-4">
             Social
           </div>
-          <a href="@option('facebook')" target="_blank"><img src="@asset('images/icon-facebook.webp')" class="lozad" alt="USB Flash Facebook"></a>
-          <a href="@option('twitter')" target="_blank"><img src="@asset('images/icon-twitter.webp')" class="lozad" alt="USB Flash Twitter"></a>
-          <a href="@option('instagram')" target="_blank"><img src="@asset('images/icon-instagram.webp')" class="lozad" alt="USB Flash Instragram"></a>
-
+          @hasoption('facebook')
+            <a href="@option('facebook')" target="_blank"><img src="@asset('images/icon-facebook.webp')" class="lozad" alt="USB Flash Facebook"></a>
+          @endoption
+          @hasoption('twitter')
+            <a href="@option('twitter')" target="_blank"><img src="@asset('images/icon-twitter.webp')" class="lozad" alt="USB Flash Twitter"></a>
+          @endoption
+          @hasoption('instagram')
+            <a href="@option('instagram')" target="_blank"><img src="@asset('images/icon-instagram.webp')" class="lozad" alt="USB Flash Instragram"></a>
+          @endoption
         </div>
       </div>
     </div>
