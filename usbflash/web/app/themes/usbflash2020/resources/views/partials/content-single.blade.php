@@ -69,9 +69,9 @@
           @endfields
         @endfield
 
-        @if(get_post_type() == "gadgets-product")
+        @if(get_post_type(get_the_ID()) == "gadgets-product")
           @include('partials.product.modal-tech')
-        @else 
+        @elseif(get_post_type(get_the_ID()) == "usb-product")
           @include('partials.product.modal-usb')
         @endif
         
@@ -151,7 +151,7 @@
 
               <div class="row">
                 <div class="col text-center">
-                  <img src="@asset('images/Branding-icon.svg')" alt="">
+                  <img src="@asset('')" alt="">
                   <div class="prod-options-title mt-2">Print Method</div>
                   <small>@sub('print_method')</small>
                 </div>  
