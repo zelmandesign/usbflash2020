@@ -40,39 +40,63 @@
                 <legend class="col-form-label col-sm-4 pt-0">Select Memory Size:</legend>
                 <div class="col-sm-8">
                   <div class="form-check custom-control-inline">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="256MB">
+                    <label class="form-check-label" for="gridRadios1">
+                      256MB
+                    </label>
+                  </div>
+                  <div class="form-check custom-control-inline">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="512MB">
+                    <label class="form-check-label" for="gridRadios1">
+                      512MB
+                    </label>
+                  </div>
+                  <div class="form-check custom-control-inline">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1GB">
                     <label class="form-check-label" for="gridRadios1">
                       1GB
                     </label>
                   </div>
                   <div class="form-check custom-control-inline">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="2GB">
                     <label class="form-check-label" for="gridRadios2">
                       2GB
                     </label>
                   </div>
                   <div class="form-check custom-control-inline">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="4GB">
                     <label class="form-check-label" for="gridRadios3">
                       4GB
                     </label>
                   </div>
                   <div class="form-check custom-control-inline">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="8GB">
                     <label class="form-check-label" for="gridRadios4">
                       8GB
                     </label>
                   </div>
                   <div class="form-check custom-control-inline">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios5" value="option5">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios5" value="16GB">
                     <label class="form-check-label" for="gridRadios5">
                       16GB
                     </label>
                   </div>
                   <div class="form-check custom-control-inline">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios6" value="option6">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios6" value="32GB">
                     <label class="form-check-label" for="gridRadios6">
                       32GB
+                    </label>
+                  </div>
+                  <div class="form-check custom-control-inline">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios7" value="64GB">
+                    <label class="form-check-label" for="gridRadios7">
+                      64GB
+                    </label>
+                  </div>
+                  <div class="form-check custom-control-inline">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios8" value="128GB">
+                    <label class="form-check-label" for="gridRadios8">
+                      128GB
                     </label>
                   </div>
                 </div>
