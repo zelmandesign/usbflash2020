@@ -134,6 +134,11 @@
 
   .text-wrapper {
     max-width: 492px;
+    padding-top: 100px;
+
+    @include media-breakpoint-down(md) {
+      padding-top: 40px;
+    }
 
     .hero-heading {
       font-size: 18px;

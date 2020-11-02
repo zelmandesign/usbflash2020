@@ -40,7 +40,7 @@
         </div>
         @endsub
         <div class="col-md home-spotlight-text d-flex align-items-center pt-5 pl-md-5">
-          <div class="text-wrapper pt-md-5 pl-md-5">
+          <div class="text-wrapper pl-md-5">
             @hassub('heading')
               <div class="hero-heading">@sub('heading')</div>
             @endsub
