@@ -3,9 +3,9 @@
 @section('content')
   @while(have_posts()) @php(the_post())
     @include('partials.page-header')
-    <div class="container">
+    <div class="container pl-md-5 pr-md-5">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-5">
           <div class="contact-form-wrapper">
             @hasfield('contact_form_title')
               <div class="form-title">@field('contact_form_title')</div>
@@ -39,7 +39,7 @@
             </form>
           </div>
         </div>
-        <div class="col-md-5 get-in-touch-wrapper">
+        <div class="col-md-6 pl-md-4 get-in-touch-wrapper">
           @hasfield('contact_heading')
             <div class="hero-heading mt-5 mt-md-0">
               @field('contact_heading')
