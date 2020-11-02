@@ -4,15 +4,44 @@
   <div class="container">
     <div class="row single-prod-top">
       <div class="col-md-7">
-        <img src="@field('prod_hero_image', 'url')" alt="@field('prod_hero_image', 'alt')" class="img-fluid lozad prod-img-bg mb-4" />
+        <img src="@field('prod_hero_image', 'url')" alt="@field('prod_hero_image', 'alt')" class="img-fluid lozad prod-img-bg mb-4 hero-prod-image" />
 
         @hasfield('prod_thumbs')
-          <div class="row">
-            @fields('prod_thumbs')
-              <div class="col">
-                <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" class="img-fluid lozad prod-img-bg" />
-              </div>
-            @endfields
+          <div id="carouselExampleFade" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              @php($item = 0)
+              @php($item_number = 0)
+              @php($count = count(get_field('prod_thumbs')))
+              <div class="carousel-item active">
+                <div class="row">
+                  @fields('prod_thumbs') 
+                    @php($item++) @php($item_number++)
+                    
+                      <div class="col-md-3 col-6 mb-4 mb-md-0">
+                        <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" class="img-fluid prod-img-bg thumb-prod-image" />
+                      </div>
+                    
+                    @if($item % 4 == 0 && $count != $item_number) 
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">
+                      @php($item = 0)
+                    @elseif($count == $item_number)
+                      </div>
+                    </div>
+                    @endif
+                  @endfields
+            </div>
+            
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
         @endfield
 

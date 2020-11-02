@@ -27,8 +27,9 @@ if(document.body.classList.contains('home')) {
   });
 }
 
-if(document.body.classList.contains('single-gadgets-product')) {
-  console.log('single gadgets')
+// Single Product
+if(document.body.classList.contains('single-gadgets-product') || document.body.classList.contains('single-usb-product')) {
+  console.log('single product')
 
   $('#qty-input').change(() => {
     var qty = $('#qty-input').val();
@@ -44,4 +45,9 @@ if(document.body.classList.contains('single-gadgets-product')) {
     var modal = $(this)
     modal.find('.modal-body #qty').val(recipient)
   })
+
+  $('.thumb-prod-image').click(function(){
+    var imgsrc=$(this).attr('src');
+    $('.hero-prod-image').attr('src',imgsrc);
+  });
 }
