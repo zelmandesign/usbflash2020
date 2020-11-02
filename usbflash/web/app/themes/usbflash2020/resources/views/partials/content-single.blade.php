@@ -69,7 +69,12 @@
           @endfields
         @endfield
 
-        @include('partials.product.modal')
+        @if(get_post_type() == "gadgets-product")
+          @include('partials.product.modal-tech')
+        @else 
+          @include('partials.product.modal-usb')
+        @endif
+        
       </div>
     </div>
 
