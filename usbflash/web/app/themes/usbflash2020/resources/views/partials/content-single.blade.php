@@ -151,7 +151,7 @@
 
               <div class="row">
                 <div class="col text-center">
-                  <img src="@asset('images/Branding-icon.svg')" alt="">
+                  <img src="@asset('images/Branding-icon.svg')" alt="" width="50" height="50">
                   <div class="prod-options-title mt-2">Print Method</div>
                   <small>@sub('print_method')</small>
                 </div>  
