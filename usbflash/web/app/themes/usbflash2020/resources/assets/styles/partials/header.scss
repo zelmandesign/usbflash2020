@@ -133,17 +133,26 @@
 }
 
 .search-form {
-  .form-control {
-    font-size: 14px;
-    border-radius: 5px 0 0 5px;
-    border: 1px solid #ddd;
-  }
+  .input-group {
+    ::-webkit-input-placeholder {
+      font-weight: 300 !important;
+      font-size: 13px;
+    }
 
-  .btn-danger {
-    border-radius: 0 5px 5px 0;
-    font-size: 14px;
-    background-color: #2a5672;
-    border-color: #2a5672;
-    padding: 0.35rem 0.75rem;
+    .form-control {
+      min-width: 225px;
+      font-size: 14px;
+      border-radius: 10px 0 0 10px;
+      border: 1px solid #ddd;
+      padding: 0.4rem 1.25rem 0.5rem 1.25rem;
+    }
+
+    .btn-danger {
+      border-radius: 0 10px 10px 0;
+      font-size: 14px;
+      background-color: #2a5672;
+      border-color: #2a5672;
+      padding: 0.35rem 1rem;
+    }
   }
 }
