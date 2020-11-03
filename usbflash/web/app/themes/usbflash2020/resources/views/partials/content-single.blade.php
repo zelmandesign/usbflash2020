@@ -64,7 +64,9 @@
               </div>
               <div class="col">
                 <h2 class="prod_short_desc_title">@sub('title')</h2>
-                @sub('verbiage')
+                <div class="prod-verbiage">
+                  @sub('verbiage')
+                </div>
               </div>
             </div>
           @endfields

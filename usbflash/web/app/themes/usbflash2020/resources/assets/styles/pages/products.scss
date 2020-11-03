@@ -66,6 +66,10 @@ hr {
     font-weight: 400;
     margin-top: 5px;
   }
+
+  .prod-pagi {
+    margin-top: -2.5px;
+  }
 }
 
 .prod_short_desc_title {
@@ -179,6 +183,10 @@ hr {
     cursor: pointer;
   }
 
+  .prod-verbiage {
+    font-size: 16px;
+  }
+
   .carousel-control-prev {
     left: -75px;
 
@@ -237,8 +245,8 @@ hr {
 
     .option {
       color: #fff;
-      background-color: $ligh-blue;
-      border-color: $ligh-blue;
+      background-color: #289dd3;
+      border-color: #289dd3;
       border-radius: 5px;
       font-size: 13px;
       font-weight: bold;
@@ -347,14 +355,14 @@ hr {
       line-height: 1.5;
       color: #495057;
       background-color: #fff;
-      border: 2px solid $ligh-blue;
+      border: 2px solid #289dd3;
       border-radius: 10px 0 0 10px;
     }
 
     .btn-danger {
       color: #fff;
-      background-color: $ligh-blue;
-      border-color: $ligh-blue;
+      background-color: #289dd3;
+      border-color: #289dd3;
       border-radius: 0 10px 10px 0;
       font-size: 13px;
       font-weight: bold;
@@ -368,8 +376,8 @@ hr {
 
     .qty-btn-like {
       color: #fff;
-      background-color: $ligh-blue;
-      border-color: $ligh-blue;
+      background-color: #289dd3;
+      border-color: #289dd3;
       border-radius: 0 10px 10px 0;
       font-size: 13px;
       font-weight: bold;
@@ -379,8 +387,8 @@ hr {
 
   .btn-danger {
     color: #fff;
-    background-color: $ligh-blue;
-    border-color: $ligh-blue;
+    background-color: #289dd3;
+    border-color: #289dd3;
     font-size: 13px;
     font-weight: bold;
     padding: 0.75rem 3.25rem;
