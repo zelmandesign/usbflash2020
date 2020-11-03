@@ -4,9 +4,9 @@
   @while(have_posts()) @php(the_post())
     @include('partials.page-header')
     <div class="container pl-md-5 pr-md-5 pt-3">
-      <div class="page-title mb-2">
+      <h1 class="page-title mb-2">
         {{ $title }}
-      </div>
+      </h1>
 
       <div class="mb-4">
         @hasfield('faq_text')

@@ -18,7 +18,7 @@
                   <div class="heading">@sub('heading')</div>
                 @endsub
                 @hassub('subheading')
-                  <div class="subheading mb-3">@sub('subheading')</div>
+                  <h1 class="subheading mb-3">@sub('subheading')</h1>
                 @endsub
                 @hassub('hero_text')
                   <div class="text">

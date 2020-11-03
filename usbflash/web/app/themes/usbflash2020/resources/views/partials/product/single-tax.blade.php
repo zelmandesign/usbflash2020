@@ -1,7 +1,7 @@
 <div class="col-md-4 mb-4 ">
   <a href="{{ get_permalink() }}">
     <img src="@field('prod_hero_image', 'url', get_the_ID())" alt="@field('prod_hero_image', 'alt', get_the_ID())" class="img-fluid">
-    <div class="prod-name">@title</div>
+    <h4 class="prod-name">@title</h4>
   </a>
 
   @if (get_post_type( get_the_ID() ) == "usb-product")

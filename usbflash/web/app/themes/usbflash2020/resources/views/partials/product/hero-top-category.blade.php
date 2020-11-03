@@ -6,9 +6,9 @@
       @endif
       <div class="row">
         <div class="col-md-4">
-          <div class="hero-prod-heading mb-4">
+          <h1 class="hero-prod-heading mb-4">
             @field('hero_prod_heading')
-          </div>
+          </h1>
           @field('hero_prod_verbiage')
         </div>
       </div>

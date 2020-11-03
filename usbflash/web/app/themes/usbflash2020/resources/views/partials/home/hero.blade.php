@@ -15,9 +15,9 @@
           @endfield
 
           @hasfield('hero_heading')
-            <div class="hero-heading">
+            <h1 class="hero-heading">
               @field('hero_heading')
-            </div>
+            </h1>
           @endfield
           
           @hasfield('hero_text')

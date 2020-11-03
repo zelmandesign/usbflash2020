@@ -25,7 +25,7 @@
 
       <div class="row prod-pagination">
         <div class="col-md-2 mb-3 mb-md-0">
-          All Products
+          <h2>All Products</h2>
         </div>
         <div class="col-md-2 mb-3 mb-md-0">
           @if($usbTerms)

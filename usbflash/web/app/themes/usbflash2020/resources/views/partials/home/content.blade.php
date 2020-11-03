@@ -16,7 +16,7 @@
             <div class="row mb-3 mb-md-0">
               <div class="col-2"><img src="@sub('product_icon', 'url')" alt="@sub('product_icon', 'alt')"></div>
               <div class="col-9 pr-md-5">
-                <div class="text-bold">@sub('product_name')</div> 
+                <h2 class="text-bold">@sub('product_name')</h2> 
                 @sub('product_description')
               </div>
             </div>
@@ -42,7 +42,7 @@
         <div class="col-md home-spotlight-text d-flex align-items-center pt-5 pl-md-5">
           <div class="text-wrapper pl-md-5">
             @hassub('heading')
-              <div class="hero-heading">@sub('heading')</div>
+              <h3 class="hero-heading">@sub('heading')</h3>
             @endsub
             @hassub('product_name')
               <div class="sub-heading">@sub('product_name')</div>
@@ -67,7 +67,7 @@
 <section class="home-featured product-list">
   <div class="container">
     @hasfield('featured_heading')
-      <div class="hero-heading">@field('featured_heading')</div>
+      <h3 class="hero-heading">@field('featured_heading')</h3>
     @endfield
     @hasfield('featured_subheading')
       <div class="sub-heading">@field('featured_subheading')</div>
@@ -122,7 +122,7 @@
     <div class="row">
       <div class="col-md-5">
         @hasfield('work_subheading')
-          <div class="sub-heading">@field('work_subheading')</div>
+          <h2 class="sub-heading">@field('work_subheading')</h2>
         @endfield
         <div class="mb-5">
           @field('work_text')
@@ -147,7 +147,7 @@
 <section class="home-help d-flex align-items-center" style="background: url('@field('home_help_bg_image')') center center no-repeat;">
   <div class="home-help-wrapper text-center">
     @hasfield('work_heading')
-      <div class="sub-heading">@field('help_heading')</div>
+      <h3 class="sub-heading">@field('help_heading')</h3>
     @endfield
     @field('help_text')
     <div class="hero-heading">@field('help_bottom_text')</div>

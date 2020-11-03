@@ -16,7 +16,7 @@
 
     <div class="row prod-pagination">
       <div class="col-md-2 mb-3 mb-md-0">
-        {{ single_cat_title() }}
+        <h2>{{ single_cat_title() }}</h2>
       </div>
       <div class="col-md-2 mb-3 mb-md-0">
         @if (get_post_type( get_the_ID() ) == "usb-product")

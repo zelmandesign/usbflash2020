@@ -60,9 +60,10 @@
           @fields('paragraphs_&_icons')
             <div class="row mb-4">
               <div class="col-2">
-                <img src="@sub('icon', 'url')" alt="@sub('icon', 'alt')" class="img-fluid lozad mt-1" />  
+                <img src="@sub('icon', 'url')" alt="@sub('icon', 'alt')" class="img-fluid mt-1" />  
               </div>
               <div class="col">
+                <h2 class="prod_short_desc_title">@sub('title')</h2>
                 @sub('verbiage')
               </div>
             </div>
@@ -80,14 +81,14 @@
 
     <div class="row single-prod-bottom">
       <div class="col-md-5 pb-4">
-        <div class="hero-heading">
+        <h3 class="hero-heading">
           @field('product_subheading')
-        </div>
+        </h3>
         @field('main_product_description')
         @hasfield('show_product_options')
-          <div class="prod-options-title mb-4 mt-5">
+          <h4 class="prod-options-title mb-4 mt-5">
             @field('prod_options_title')
-          </div>
+          </h4>
 
           @hasfield('prod_options')
             <div class="option-wrapper">

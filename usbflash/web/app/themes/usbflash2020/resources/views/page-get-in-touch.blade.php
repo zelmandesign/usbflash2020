@@ -3,7 +3,7 @@
 @section('content')
   @while(have_posts()) @php(the_post())
     @include('partials.page-header')
-    <div class="container pl-md-5 pr-md-5">
+    <div class="container pr-md-5">
       <div class="row">
         <div class="col-md-5">
           <div class="contact-form-wrapper">
@@ -31,7 +31,7 @@
               </div>
               <div class="form-group">
                 <label for="message-text">Message / Additional info</label>
-                <textarea class="form-control" id="message-text" placeholder="Please specify any additional requirements here"></textarea>
+                <textarea class="form-control" id="message-text" placeholder="Please specify any additional requirements here" rows="4" style="height:100%;"></textarea>
               </div>
               <div class="form-group text-right">
                 <button class="btn btn-danger">SUBMIT</button>
@@ -41,9 +41,9 @@
         </div>
         <div class="col-md-6 pl-md-4 get-in-touch-wrapper">
           @hasfield('contact_heading')
-            <div class="hero-heading mt-5 mt-md-0">
+            <h1 class="hero-heading mt-5 mt-md-0">
               @field('contact_heading')
-            </div>
+            </h1>
           @endfield
 
           @hasfield('contact_text')
