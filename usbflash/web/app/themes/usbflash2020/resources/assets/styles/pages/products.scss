@@ -74,13 +74,17 @@ hr {
 
 .prod_short_desc_title {
   color: $dark-heading;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 5px;
 }
 
 .product-list {
   .col-md-4 {
+    margin-bottom: 70px;
+    padding-left: 17.5px;
+    padding-right: 17.5px;
+
     &:nth-child(5n+1) {
       a {
         &:nth-child(1) {
@@ -185,6 +189,18 @@ hr {
 
   .prod-verbiage {
     font-size: 16px;
+  }
+
+  .col-form-label {
+    margin-top: 2px;
+  }
+
+  .custom-control-inline {
+    margin-top: -5px;
+
+    .form-check-input {
+      margin-top: 6px;
+    }
   }
 
   .carousel-control-prev {
