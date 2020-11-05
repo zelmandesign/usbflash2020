@@ -110,21 +110,24 @@
 
 .home-spotlight {
   color: $dark-heading;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   min-height: 752px;
   background-position: absolute top -100px !important;
 
-  .splat-mobile {
-    @include media-breakpoint-down(md) {
-      height: 425px;
+  @include media-breakpoint-down(md) {
+    background-image: none !important;
+    margin-top: 50px;
+    min-height: 0;
+
+    .splat-mobile {
+      height: 260px;
+      background-size: cover !important;
+      background-position: top 50px !important;
     }
   }
 
   .splat-wrapper {
     position: relative;
-    // width: 820px;
-    // height: 513px;
-    // left: -200px;
 
     .home-product {
       position: absolute;
@@ -133,16 +136,23 @@
       top: 200px;
 
       @include media-breakpoint-down(md) {
-        left: -20px;
+        left: 10px;
+        top: 60px;
+        width: 65%;
       }
     }
 
     .splat-bg {
       position: absolute;
       left: -200px;
+      width: 820px;
+      height: 513px;
 
       @include media-breakpoint-down(md) {
-        left: -225px;
+        left: -50px;
+        top: -20px;
+        width: 420px;
+        height: auto;
       }
     }
   }
@@ -152,7 +162,7 @@
     padding-top: 100px;
 
     @include media-breakpoint-down(md) {
-      padding-top: 40px;
+      padding-top: 0;
     }
 
     .hero-heading {
@@ -165,6 +175,10 @@
     min-height: 40vh;
     display: flex;
     font-weight: 300;
+
+    @include media-breakpoint-down(md) {
+      min-height: 5vh;
+    }
   }
 
   .sub-heading {
@@ -189,7 +203,7 @@
   margin-bottom: 100px;
 
   @include media-breakpoint-down(md) {
-    margin-top: 100px;
+    margin-top: 50px;
   }
 
   .hero-heading {

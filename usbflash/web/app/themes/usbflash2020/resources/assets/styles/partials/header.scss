@@ -124,29 +124,31 @@
 }
 
 @include media-breakpoint-down(lg) {
-  .navbar-nav {
-    .menu-item,
-    .nav-link {
-      color: #fff !important;
-      padding: 0.65rem 0.65rem !important;
-      border-radius: 0;
-
-      &:hover {
-        color: #fff !important;
-        background-color: #7f858b !important;
-      }
-    }
-
-    .active {
-      background-color: #fff !important;
-
-      &:hover {
-        background-color: #fff !important;
-      }
-
+  header {
+    .navbar-nav {
+      .menu-item,
       .nav-link {
-        color: #404f5c !important;
+        color: #fff !important;
+        padding: 0.65rem 0.65rem !important;
+        border-radius: 0;
+
+        &:hover {
+          color: #fff !important;
+          background-color: #7f858b !important;
+        }
+      }
+
+      .active {
         background-color: #fff !important;
+
+        &:hover {
+          background-color: #fff !important;
+        }
+
+        .nav-link {
+          color: #404f5c !important;
+          background-color: #fff !important;
+        }
       }
     }
   }

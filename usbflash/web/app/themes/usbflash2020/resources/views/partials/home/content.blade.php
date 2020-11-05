@@ -29,10 +29,10 @@
 
 @group('spotlight_product')
   <section class="home-spotlight mb-5 mb-md-0" style="background: url('@field('home_spotlight_bg_image')') center center no-repeat;">
-    <div class="container pt-md-5">
+    <div class="container pt-5">
       <div class="row">
         @hassub('product_image')
-        <div class="col-md text-center splat-mobile">
+        <div class="col-md text-center splat-mobile" style="background: url('@field('home_spotlight_bg_image')');">
           <div class="splat-wrapper">
             <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" width="400" height="auto" class="home-product">
             <img src="@asset('images/Featured-Promotional-Splat.svg')" alt="" width="820" height="513" class="splat-bg">
@@ -114,7 +114,7 @@
 </section>
 
 <section class="home-work-with-us d-flex align-items-center bg-danger" style="background: url('@field('home_work_with_us_bg_image')') center center no-repeat;">
-  <div class="container">
+  <div class="container text-center text-md-left">
     @hasfield('work_heading')
       <div class="hero-heading mb-3">@field('work_heading')</div>
     @endfield
@@ -133,8 +133,18 @@
           <div class="row mb-5">
             @fields('work_paragraphs')
               <div class="col-md-6 pr-md-5 mb-5">
-                <div class="text-bold d-flex"> <img src="@asset('images/Promotional-Tick-Box.svg')" class="mr-2" width="25" height="25"> @sub('heading')</div>
-                @sub('text')
+                <div class="row">
+                  <div class="col-md-1 pb-2">
+                    <img src="@asset('images/Promotional-Tick-Box.svg')" width="25" height="25">
+                  </div>
+                  <div class="col-md">
+                    <div class="text-bold ml-md-1">@sub('heading')</div>  
+                  </div>
+                </div>
+                <div class="pl-5 pl-md-0 pr-5 pr-md-0">
+                  @sub('text')
+                </div>
+                
               </div>
             @endfields
           </div>

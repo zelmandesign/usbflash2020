@@ -1,13 +1,13 @@
 <footer class="content-info d-flex align-items-center">
   <div class="container">
     <div class="row">
-      <div class="col-md-3 col-6 pb-4">
+      <div class="col-md-3 pb-4">
         <div class="mb-4"><strong>NAVIGATE</strong></div>
         @if (has_nav_menu('footer_navigation'))
           {!! wp_nav_menu(['theme_location' => 'footer_navigation', 'menu_class' => 'navbar-nav']) !!}
         @endif
       </div>
-      <div class="col-md-4 col-6 pb-4">
+      <div class="col-md-4 pb-4">
         <strong>CONNECT</strong>
         <div class="social-media">
           @hasoption('facebook')
@@ -23,10 +23,10 @@
         <div class="mb-4"><strong>COMPANY INFO</strong></div>
         @php the_field('company_info', 'option'); @endphp
       </div> 
-      <div class="col-md-3 col-6 pb-4">
+      <div class="col-md-3 d-none d-md-flex pb-4">
         <img src="@asset('images/UK-Map-Contact.svg')" class="lozad" alt="USB Flash Map">
       </div> 
-      <div class="col-md-2 col-6 pb-4">
+      <div class="col-md-2 pb-4">
         <div class="mb-4"><strong>CONTACT</strong></div>
         @php the_field('address', 'option'); @endphp
         <br>
