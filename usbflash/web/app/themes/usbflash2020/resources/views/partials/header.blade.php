@@ -8,10 +8,6 @@
         <img src="@asset('images/USB-Flash-Logo-Colour.svg')" alt="USBflash.co.uk" width="93" height="76">
       @endif
     </a>
-    
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
       @include('forms.search')
@@ -35,7 +31,12 @@
     </a>
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <div id="nav-icon3">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -46,3 +47,5 @@
 
   </div>
 </header>
+
+<div class="menu-overlay"> &nbsp;</div>

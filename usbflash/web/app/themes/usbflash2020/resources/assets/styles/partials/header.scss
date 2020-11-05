@@ -94,27 +94,18 @@
 }
 
 .navbar-light {
+  .navbar-toggler {
+    #nav-icon3 span {
+      background: #32424f;
+    }
+  }
+
   .navbar-nav {
     .menu-item,
     .nav-link {
       color: #313a41;
       padding: 0.25rem 0.65rem;
-
-      &:first-child {
-        border-radius: 5px 0 0 5px;
-
-        @include media-breakpoint-down(md) {
-          border-radius: 0;
-        }
-      }
-
-      &:last-child {
-        border-radius: 0 5px 5px 0;
-
-        @include media-breakpoint-down(md) {
-          border-radius: 0;
-        }
-      }
+      border-radius: 0;
 
       &:hover {
         color: #fff;
@@ -129,6 +120,191 @@
     .active a {
       color: #2b5672 !important;
     }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .navbar-nav {
+    .menu-item,
+    .nav-link {
+      color: #fff !important;
+      padding: 0.65rem 0.65rem !important;
+      border-radius: 0;
+
+      &:hover {
+        color: #fff !important;
+        background-color: #7f858b !important;
+      }
+    }
+
+    .active {
+      background-color: #fff !important;
+
+      &:hover {
+        background-color: #fff !important;
+      }
+
+      .nav-link {
+        color: #404f5c !important;
+        background-color: #fff !important;
+      }
+    }
+  }
+}
+
+/*
+ * Mobile Navbar
+ **/
+
+.navbar-toggler {
+  padding: 0.6rem 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  border: 1px solid transparent;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.toggler-open {
+  background-color: #fff;
+  border-color: #fff;
+
+  #nav-icon3 span {
+    background: #000;
+  }
+}
+
+.navbar-dark .navbar-toggler {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+#nav-icon1,
+#nav-icon2,
+#nav-icon3,
+#nav-icon4 {
+  width: 30px;
+  height: 22.5px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span,
+#nav-icon3 span,
+#nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 4.5px;
+  width: 100%;
+  background: #fff;
+  border-radius: 4.5px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon3 span:nth-child(1) {
+  top: 0;
+}
+
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+  top: 9px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 18px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 9px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 9px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3 {
+  transform: scale(0.7);
+}
+
+@include media-breakpoint-down(lg) {
+  .navbar-toggler {
+    z-index: 102;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 35%;
+    padding-top: 100px;
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.4s ease;
+    display: block;
+    background-color: #32424f;
+    z-index: 100;
+    overflow: auto;
+  }
+
+  .navbar-collapse.collapsing {
+    height: auto !important;
+    margin-left: 50%;
+    left: 50%;
+    transition: all 0.2s ease;
+  }
+
+  .navbar-collapse.show {
+    right: 0;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .menu-overlay {
+    display: none;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    /* IE7 & 8 */
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 49;
   }
 }
 

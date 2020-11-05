@@ -3,7 +3,7 @@
     @include('partials.header')
     
     <div class="container">
-      <div class="hero-wrapper d-flex align-items-center">
+      <div class="hero-wrapper d-flex align-items-center text-center text-md-left">
         <div class="hero-head">
           @hasfield('hero_typed_text')
             <div class="typed-strings">
@@ -27,9 +27,9 @@
           @endfield
           
           @group('hero_buttons')
-            <div class="hero-buttons mb-5">
+            <div class="hero-buttons mb-md-5">
               @hassub('link1')
-                <a href="@sub('link1')" class="btn btn-danger mr-2">@sub('button1_text')</a>
+                <a href="@sub('link1')" class="btn btn-danger mb-3 mb-md-0 mr-md-2">@sub('button1_text')</a>
               @endsub
               @hassub('link2')
                 <a href="@sub('link2')" class="btn btn-outline-danger">@sub('button2_text')</a>

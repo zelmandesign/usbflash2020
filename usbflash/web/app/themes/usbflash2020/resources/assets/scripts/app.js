@@ -14,6 +14,20 @@ $('.navbar .dropdown > a').click(function () {
   location.href = this.href;
 });
 
+// Navbar
+$('[data-toggle="collapse"]').on('click', function() {
+  $(".menu-overlay").fadeToggle(500);
+  $('#nav-icon3').toggleClass('open');
+  $(this).toggleClass('toggler-open');
+});
+
+$(".menu-overlay").click(function(event) {
+  $(this).fadeOut(500);
+  $('.collapse').collapse('hide')
+  $('#nav-icon3').removeClass('open');
+  $('.navbar-toggler').removeClass('toggler-open');
+});
+
 // Home Page JS
 if(document.body.classList.contains('home')) {
   console.log('home page')

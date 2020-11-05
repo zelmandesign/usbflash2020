@@ -72,6 +72,21 @@
         border-color: $ligh-blue;
       }
     }
+
+    @include media-breakpoint-down(md) {
+      margin: 0 auto;
+      width: 250px;
+
+      .btn-danger {
+        width: 200px;
+        padding: 15px 15px;
+      }
+
+      .btn-outline-danger {
+        width: 200px;
+        padding: 15px 15px;
+      }
+    }
   }
 }
 

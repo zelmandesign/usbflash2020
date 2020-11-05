@@ -14,8 +14,8 @@
         @fields('products')
           <div class="col-md-4 mb-md-5 mb-3">
             <div class="row mb-3 mb-md-0">
-              <div class="col-2"><img src="@sub('product_icon', 'url')" alt="@sub('product_icon', 'alt')"></div>
-              <div class="col-9 pr-md-5">
+              <div class="col-md-2 text-center text-md-left mb-2"><img src="@sub('product_icon', 'url')" alt="@sub('product_icon', 'alt')"></div>
+              <div class="col-md-9 text-center text-md-left pr-md-5 pl-5 pr-5 pl-md-0">
                 <h2 class="text-bold">@sub('product_name')</h2> 
                 @sub('product_description')
               </div>
