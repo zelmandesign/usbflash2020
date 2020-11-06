@@ -7,38 +7,75 @@
         <img src="@field('prod_hero_image', 'url')" alt="@field('prod_hero_image', 'alt')" class="img-fluid lozad prod-img-bg mb-4 hero-prod-image" />
 
         @hasfield('prod_thumbs')
-          <div id="carouselExampleFade" class="carousel slide" data-ride="carousel">
+          <div id="carouselDesktop" class="carousel slide d-none d-md-block" data-ride="carousel">
             <div class="carousel-inner">
-              @php($item = 0)
-              @php($item_number = 0)
-              @php($count = count(get_field('prod_thumbs')))
+              @php($desktop_item = 0)
+              @php($desktop_item_number = 0)
+              @php($desktop_count = count(get_field('prod_thumbs')))
               <div class="carousel-item active">
                 <div class="row">
                   @fields('prod_thumbs') 
-                    @php($item++) @php($item_number++)
+                    @php($desktop_item++) @php($desktop_item_number++)
                     
-                      <div class="col-md-3 col-6 mb-4 mb-md-0">
+                      <div class="col-3 mb-4 mb-md-0">
                         <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" class="img-fluid prod-img-bg thumb-prod-image" />
                       </div>
                     
-                    @if($item % 4 == 0 && $count != $item_number) 
+                    @if($desktop_item % 4 == 0 && $desktop_count != $desktop_item_number) 
                       </div>
                     </div>
                     <div class="carousel-item">
                       <div class="row">
-                      @php($item = 0)
-                    @elseif($count == $item_number)
+                      @php($desktop_item = 0)
+                    @elseif($desktop_count == $desktop_item_number)
                       </div>
                     </div>
                     @endif
                   @endfields
             </div>
             
-            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselDesktop" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselDesktop" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+          <div id="carouselMobile" class="carousel slide d-block d-md-none" data-ride="carousel">
+            <div class="carousel-inner">
+              @php($mobile_item = 0)
+              @php($mobile_item_number = 0)
+              @php($mobile_count = count(get_field('prod_thumbs')))
+              <div class="carousel-item active">
+                <div class="row">
+                  @fields('prod_thumbs') 
+                    @php($mobile_item++) @php($mobile_item_number++)
+                    
+                      <div class="col-4 mb-4 mb-md-0">
+                        <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" class="img-fluid prod-img-bg thumb-prod-image" />
+                      </div>
+                    
+                    @if($mobile_item % 3 == 0 && $mobile_count != $mobile_item_number) 
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">
+                      @php($mobile_item = 0)
+                    @elseif($mobile_count == $mobile_item_number)
+                      </div>
+                    </div>
+                    @endif
+                  @endfields
+            </div>
+            
+            <a class="carousel-control-prev" href="#carouselMobile" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselMobile" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
@@ -47,10 +84,10 @@
 
       </div>
       <div class="col-md pl-md-5">
-        <h1 class="entry-title mb-4 mt-3">
+        <h1 class="entry-title mb-4 mt-3 text-center text-md-left">
           {!! $title !!}
         </h1>
-        <div class="mb-4">
+        <div class="mb-4 text-center text-md-left">
           @hasfield('prod_short_description')
             @field('prod_short_description')
           @endfield
@@ -58,11 +95,11 @@
 
         @hasfield('paragraphs_&_icons')
           @fields('paragraphs_&_icons')
-            <div class="row mb-4">
-              <div class="col-2">
+            <div class="row mb-4 text-center text-md-left">
+              <div class="col-md-2 mb-3 mb-md-0">
                 <img src="@sub('icon', 'url')" alt="@sub('icon', 'alt')" class="img-fluid mt-1" />  
               </div>
-              <div class="col">
+              <div class="col-md pl-5 pr-5 pl-md-0 pr-md-0">
                 <h2 class="prod_short_desc_title">@sub('title')</h2>
                 <div class="prod-verbiage">
                   @sub('verbiage')

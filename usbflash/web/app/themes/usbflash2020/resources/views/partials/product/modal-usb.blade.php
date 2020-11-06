@@ -1,9 +1,11 @@
-<div class="modal-wrapper mt-5">
+<div class="modal-wrapper mt-5 text-center text-md-left">
   <div class="sub mb-4">how many do you need?</div>
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" id="qty-input" placeholder="ex. 100" aria-label="ex. 100" aria-describedby="basic-addon2" > 
-    <div class="input-group-append">
-      <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#productModal" id="qty-submit" data-qty="">quick quote</button>
+  <div class="d-flex justify-content-center">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" id="qty-input" placeholder="ex. 100" aria-label="ex. 100" aria-describedby="basic-addon2" > 
+      <div class="input-group-append">
+        <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#productModal" id="qty-submit" data-qty="">quick quote</button>
+      </div>
     </div>
   </div>
 
@@ -27,8 +29,8 @@
          
           <form>
             <div class="form-group row">
-              <label for="recipient-name" class="col-sm-4 col-form-label">Quantity</label>
-              <div class="col-sm-8">
+              <label for="recipient-name" class="col-sm-4 col-form-label mb-2 mb-md-0">Quantity</label>
+              <div class="col-sm-8 d-flex justify-content-center">
                 <div class="input-group">
                   <input type="text" class="form-control" id="qty" placeholder="ex. 100" required> 
                   <div class="qty-btn-like">QTY</div>

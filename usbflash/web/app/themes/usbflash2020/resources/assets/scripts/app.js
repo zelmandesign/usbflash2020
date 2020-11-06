@@ -15,17 +15,17 @@ $('.navbar .dropdown > a').click(function () {
 });
 
 // Navbar
-$('[data-toggle="collapse"]').on('click', function() {
+$('.navbar-toggler').on('click', function() {
   $(".menu-overlay").fadeToggle(500);
   $('#nav-icon3').toggleClass('open');
   $(this).toggleClass('toggler-open');
 });
 
-$(".menu-overlay").click(function(event) {
+$(".menu-overlay").click(function() {
   $(this).fadeOut(500);
   $('.collapse').collapse('hide')
   $('#nav-icon3').removeClass('open');
-  $('.navbar-toggler').removeClass('toggler-open');
+  $('.navbar-toggler').removeClass('open');
 });
 
 // Home Page JS
@@ -39,6 +39,7 @@ if(document.body.classList.contains('home')) {
     loop: true,
     showCursor: false,
   });
+  typed;
 }
 
 // Single Product

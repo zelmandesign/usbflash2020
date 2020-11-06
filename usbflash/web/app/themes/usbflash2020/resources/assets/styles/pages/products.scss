@@ -440,7 +440,7 @@ hr {
     padding: 0 75px 55px 75px;
 
     @include media-breakpoint-down(md) {
-      padding: 0 20px 0px 20px;
+      padding: 0 20px 0 20px;
     }
 
     .modal-hero-text {
