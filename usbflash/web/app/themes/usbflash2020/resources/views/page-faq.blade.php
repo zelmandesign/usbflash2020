@@ -24,7 +24,7 @@
                     @sub('faq_title')
                   </button>
 
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ $row }}" aria-expanded="true" aria-controls="collapse{{ $row }}">
+                  <button class="btn btn-link d-none d-md-block" type="button" data-toggle="collapse" data-target="#collapse{{ $row }}" aria-expanded="true" aria-controls="collapse{{ $row }}">
                     <img src="@asset('images/faq-icon.png')" class="mr-3" alt="">
                   </button>
                 </h2>

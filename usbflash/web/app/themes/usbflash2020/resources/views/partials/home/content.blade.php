@@ -160,6 +160,7 @@
       <h3 class="sub-heading">@field('help_heading')</h3>
     @endfield
     @field('help_text')
-    <div class="hero-heading">@field('help_bottom_text')</div>
+    <div class="hero-heading d-none d-md-block">@field('help_bottom_text')</div>
+    <div class="hero-heading d-block d-md-none">@field('help_bottom_text_mobile')</div>
   </div>
 </section>

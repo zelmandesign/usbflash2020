@@ -398,6 +398,10 @@ hr {
       font-size: 13px;
       font-weight: bold;
       padding: 0.5rem 4rem;
+
+      @include media-breakpoint-down(md) {
+        padding: 0.5rem 2.75rem;
+      }
     }
   }
 
@@ -446,6 +450,12 @@ hr {
     .modal-hero-text {
       padding: 0 30px;
       margin-bottom: 40px;
+    }
+
+    .input-group {
+      @include media-breakpoint-down(md) {
+        max-width: 227px;
+      }
     }
   }
 }
