@@ -425,6 +425,14 @@ hr {
   margin: 1.75rem auto;
   color: #445663;
 
+  @include media-breakpoint-down(md) {
+    select:focus,
+    textarea:focus,
+    input:focus {
+      font-size: 13px !important;
+    }
+  }
+
   .modal-content {
     border-radius: 0.5rem;
   }
