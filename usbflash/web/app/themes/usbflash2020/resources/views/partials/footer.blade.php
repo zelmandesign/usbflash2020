@@ -11,13 +11,13 @@
         <strong>CONNECT</strong>
         <div class="social-media">
           @hasoption('facebook')
-            <a href="@option('facebook')" target="_blank"><img src="@asset('images/icon-facebook.webp')" class="lozad" alt="USB Flash Facebook"></a>
+            <a href="@option('facebook')" target="_blank"><img src="@asset('images/icon-facebook.webp')" class="lozad" alt="USB Flash Facebook" width="39" height="39"></a>
           @endoption
           @hasoption('twitter')
-            <a href="@option('twitter')" target="_blank"><img src="@asset('images/icon-twitter.webp')" class="lozad" alt="USB Flash Twitter"></a>
+            <a href="@option('twitter')" target="_blank"><img src="@asset('images/icon-twitter.webp')" class="lozad" alt="USB Flash Twitter" width="39" height="39"></a>
           @endoption
           @hasoption('instagram')
-            <a href="@option('instagram')" target="_blank"><img src="@asset('images/icon-instagram.webp')" class="lozad" alt="USB Flash Instragram"></a>
+            <a href="@option('instagram')" target="_blank"><img src="@asset('images/icon-instagram.webp')" class="lozad" alt="USB Flash Instragram" width="39" height="39"></a>
           @endoption
         </div>
         <div class="mb-4"><strong>COMPANY INFO</strong></div>
