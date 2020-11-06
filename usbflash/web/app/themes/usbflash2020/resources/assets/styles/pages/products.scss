@@ -426,10 +426,18 @@ hr {
   color: #445663;
 
   @include media-breakpoint-down(md) {
+    font-size: 16px !important;
+
     select:focus,
     textarea:focus,
     input:focus {
-      font-size: 13px !important;
+      font-size: 16px !important;
+    }
+  }
+
+  .form-control {
+    @include media-breakpoint-down(md) {
+      font-size: 16px !important;
     }
   }
 
