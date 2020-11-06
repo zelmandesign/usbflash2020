@@ -444,6 +444,10 @@ hr {
     input[type="url"] {
       font-size: 16px !important;
     }
+
+    ::-webkit-input-placeholder {
+      font-size: 26px !important;
+    }
   }
 
   .form-control {
