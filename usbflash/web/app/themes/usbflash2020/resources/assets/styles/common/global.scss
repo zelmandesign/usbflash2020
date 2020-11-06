@@ -4,6 +4,11 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
+
+  // @include media-breakpoint-down(lg) {
+  //   overflow-x: hidden;
+  //   overflow-y: hidden;
+  // }
 }
 
 a {

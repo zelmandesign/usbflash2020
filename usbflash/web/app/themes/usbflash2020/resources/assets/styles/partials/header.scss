@@ -274,12 +274,13 @@
     left: 35%;
     padding-top: 100px;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     transition: all 0.4s ease;
     display: block;
     background-color: #32424f;
     z-index: 100;
     overflow: auto;
+    overflow-y: scroll !important;
   }
 
   .navbar-collapse.collapsing {
@@ -333,4 +334,8 @@
       padding: 0.35rem 1rem;
     }
   }
+}
+
+.mobile-overflow-fix {
+  overflow-y: hidden;
 }

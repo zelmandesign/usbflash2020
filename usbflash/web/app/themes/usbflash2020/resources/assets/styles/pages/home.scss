@@ -73,7 +73,7 @@
       }
     }
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       margin: 0 auto;
       width: 250px;
 

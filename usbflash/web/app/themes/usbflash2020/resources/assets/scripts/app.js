@@ -19,6 +19,7 @@ $('.navbar-toggler').on('click', function() {
   $(".menu-overlay").fadeToggle(500);
   $('#nav-icon3').toggleClass('open');
   $(this).toggleClass('toggler-open');
+  $('body').toggleClass('mobile-overflow-fix');
 });
 
 $(".menu-overlay").click(function() {
@@ -26,6 +27,7 @@ $(".menu-overlay").click(function() {
   $('.collapse').collapse('hide')
   $('#nav-icon3').removeClass('open');
   $('.navbar-toggler').removeClass('open');
+  $('body').removeClass('mobile-overflow-fix');
 });
 
 // Home Page JS
