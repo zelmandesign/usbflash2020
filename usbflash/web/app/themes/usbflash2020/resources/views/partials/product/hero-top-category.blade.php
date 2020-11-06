@@ -5,7 +5,7 @@
         {{ yoast_breadcrumb('<p id="breadcrumbs" class="pt-5 pb-5">','</p>') }}
       @endif
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-xl-4 col-lg-6">
           <h1 class="hero-prod-heading mb-4">
             @field('hero_prod_heading')
           </h1>

@@ -1,4 +1,4 @@
-<header class="banner navbar navbar-expand-lg pt-5 pb-3 d-none d-lg-block @if(is_front_page()) navbar-dark @else navbar-light @endif">
+<header class="banner navbar navbar-expand-lg pt-5 pb-3 d-none d-xl-block @if(is_front_page()) navbar-dark @else navbar-light @endif">
   <div class="container">
     
     <a class="navbar-brand" href="{{ home_url('/') }}">
@@ -19,7 +19,7 @@
   </div>
 </header>
 
-<header class="banner navbar navbar-expand-lg pb-3 d-block d-lg-none @if(is_front_page()) navbar-dark @else navbar-light @endif">
+<header class="banner navbar navbar-expand-xl pb-3 d-block d-xl-none @if(is_front_page()) navbar-dark @else navbar-light @endif">
   <div class="container">
     
     <a class="navbar-brand" href="{{ home_url('/') }}">
