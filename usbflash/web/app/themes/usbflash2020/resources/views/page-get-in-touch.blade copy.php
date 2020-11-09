@@ -10,7 +10,33 @@
             @hasfield('contact_form_title')
               <div class="form-title">@field('contact_form_title')</div>
             @endfield
-            @shortcode('[contact-form-7 id="397" title="Get in touch"]')
+            <form class="form-inside">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="first_name">First Name</label>
+                  <input type="text" class="form-control" id="first_name" placeholder="First name">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="last_name">Last Name</label>
+                  <input type="text" class="form-control" id="last_name" placeholder="Last name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="company_name">Company Name *</label>
+                <input type="text" class="form-control" id="company_name" placeholder="Company Name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" class="form-control" id="email" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label for="message-text">Message / Additional info</label>
+                <textarea class="form-control" id="message-text" placeholder="Please specify any additional requirements here" rows="4" style="height:100%;"></textarea>
+              </div>
+              <div class="form-group text-right">
+                <button class="btn btn-danger">SUBMIT</button>
+              </div>
+            </form>
           </div>
         </div>
         <div class="col-md-6 pl-md-4 get-in-touch-wrapper">

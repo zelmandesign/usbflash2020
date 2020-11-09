@@ -157,3 +157,7 @@ small {
     font-size: 16px !important;
   }
 }
+
+.wpcf7-form-control {
+  @extend .form-control;
+}
