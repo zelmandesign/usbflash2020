@@ -10,7 +10,7 @@
             @hasfield('contact_form_title')
               <div class="form-title">@field('contact_form_title')</div>
             @endfield
-            @shortcode('[contact-form-7 id="397" title="Get in touch"]')
+            @shortcode('[contact-form-7 id="237" title="Contact form 1"]')
           </div>
         </div>
         <div class="col-md-6 pl-md-4 get-in-touch-wrapper">
