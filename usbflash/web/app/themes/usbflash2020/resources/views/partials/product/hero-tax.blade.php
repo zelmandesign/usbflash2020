@@ -8,8 +8,8 @@
         <div class="col-md-5">
           @php echo category_description( get_category_by_slug('category-slug')->term_id ); @endphp
         </div>
-        <div class="col-md text-center d-flex align-items-md-end justify-content-md-end">
-          <a href="https://uk.trustpilot.com/review/www.usbflash.co.uk" target="_blank"><img src="@asset('images/Trust.svg')" alt="" width="218px" height="102px"></a>
+        <div class="col-md text-md-center text-left d-flex align-items-md-end justify-content-md-end mt-5 mt-md-0">
+          <a href="https://uk.trustpilot.com/review/www.usbflash.co.uk" target="_blank"><img src="@asset('images/Trust.svg')" alt="" width="218px" height="102px" class="trust-pilot"></a>
         </div>
       </div>
     </div>

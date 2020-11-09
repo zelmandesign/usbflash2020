@@ -32,6 +32,12 @@ hr {
   font-weight: 300;
 }
 
+.trust-pilot {
+  @include media-breakpoint-down(md) {
+    width: 70%;
+  }
+}
+
 .hero-product {
   background: rgb(40, 50, 59) !important;
 

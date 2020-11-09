@@ -103,8 +103,12 @@
   .text-bold {
     font-size: 17px;
     font-weight: 600;
-    color: $dark-heading;
+    color: $dark-heading !important;
     margin-bottom: 5px;
+  }
+
+  .home_prod_desc {
+    color: #b5b5b5;
   }
 }
 
