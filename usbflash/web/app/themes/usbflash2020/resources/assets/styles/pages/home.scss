@@ -130,6 +130,12 @@
     }
   }
 
+  @include media-breakpoint-up(md) {
+    .splat-mobile {
+      background-image: none !important;
+    }
+  }
+
   .splat-wrapper {
     position: relative;
 

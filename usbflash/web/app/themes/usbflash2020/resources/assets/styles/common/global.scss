@@ -17,6 +17,10 @@ a {
   &:hover {
     text-decoration: none;
   }
+
+  &:focus {
+    outline: 0 !important;
+  }
 }
 
 small {

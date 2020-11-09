@@ -129,6 +129,10 @@
           color: #fff !important;
           background-color: #7f858b !important;
         }
+
+        &:focus {
+          outline: 0 !important;
+        }
       }
 
       .active {
