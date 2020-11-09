@@ -49,16 +49,6 @@
   }
 }
 
-@include media-breakpoint-up(lg) { 
-  .dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-
-  .dropdown-toggle::after {
-    display: none;
-  }
-}
-
 .navbar-dark {
   .navbar-nav {
     .menu-item,

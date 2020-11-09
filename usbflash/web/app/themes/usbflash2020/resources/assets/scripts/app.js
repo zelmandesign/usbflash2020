@@ -9,19 +9,6 @@ $(document).ready(() => {
   console.log('Hello world');
 });
 
-// Global JS
-$('.desktop .navbar-nav .dropdown > a').click(function () {
-  location.href = this.href;
-});
-
-$('.dropdown').on('show.bs.dropdown', function () {
-    $(this).siblings('.open').removeClass('open').find('a.dropdown-toggle').attr('data-toggle', 'dropdown');
-    $(this).find('a.dropdown-toggle').removeAttr('data-toggle');
-    $(this).find('a.dropdown-toggle').click(function () {
-      location.href = this.href;
-    });
-});
-
 // Navbar
 $('.navbar-toggler').on('click', function() {
   $(".menu-overlay").fadeToggle(500);
