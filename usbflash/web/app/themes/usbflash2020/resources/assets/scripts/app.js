@@ -10,7 +10,7 @@ $(document).ready(() => {
 });
 
 // Global JS
-$('.navbar .dropdown > a').click(function () {
+$('.desktop .navbar-nav .dropdown > a').click(function () {
   location.href = this.href;
 });
 
