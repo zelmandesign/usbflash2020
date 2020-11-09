@@ -3,7 +3,8 @@ module.exports = {
   extends: 'eslint:recommended',
   parser: 'babel-eslint',
   globals: {
-    wp: true
+    wp: true,
+    ajaxObject :true,
   },
   env: {
     node: true,
