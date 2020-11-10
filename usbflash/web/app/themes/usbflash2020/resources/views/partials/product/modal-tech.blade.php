@@ -1,6 +1,6 @@
 <div class="modal-wrapper mt-5 text-center text-md-left">
   <div class="sub mb-4">how many do you need?</div>
-  <div class="d-flex justify-content-center">
+  <div class="modal-qty">
     <div class="input-group mb-3">
       <input type="text" class="form-control" id="qty-input" placeholder="ex. 100" aria-label="ex. 100" aria-describedby="basic-addon2" > 
       <div class="input-group-append">

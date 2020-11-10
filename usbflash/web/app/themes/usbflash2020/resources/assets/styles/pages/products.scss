@@ -183,6 +183,15 @@ hr {
   color: #808080;
   line-height: 1.65rem;
 
+  .modal-qty {
+    display: flex;
+    justify-content: left;
+
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+    }
+  }
+
   .entry-title {
     font-weight: bold;
     font-size: 25px;
