@@ -125,3 +125,19 @@ function register_gadgets_post_type()
         )
     );
 }
+
+// Removing CPT name from breadcrumbs
+
+function my_breadcrumb_filter_function( $crumbs ) {
+
+    // replace "cpt" with your custom post type name 
+    if(is_singular('usb-product')) {
+      $crumbs[1] = '';
+    }
+    elseif(is_singular('gadgets-product')) {
+        $crumbs[1] = '';
+    }
+    return $crumbs;
+
+}
+add_filter( 'wpseo_breadcrumb_links', 'my_breadcrumb_filter_function' );
