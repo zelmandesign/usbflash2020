@@ -9,6 +9,7 @@ web/app/plugins/*
 !web/app/plugins/wp-sync-db-media-files
 !web/app/plugins/filebird
 !web/app/plugins/post-types-order
+!web/app/plugins/permalink-manager-pro
 web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*

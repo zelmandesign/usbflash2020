@@ -56,6 +56,7 @@
             'next_text'          => ' ',
             'before_page_number' => ' ',
             'after_page_number'  => ' ',
+            'mid_size' => 2,
           )) }}
         </div>
       </div>
