@@ -153,7 +153,7 @@
               @endforeach
             @endif
           </div>
-          <small>Pantone match available on 500+</small>
+          <small>@field('colors_text')</small>
         </div>
         @endfield
 
