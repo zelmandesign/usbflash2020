@@ -4,10 +4,8 @@
 import 'jquery';
 import 'bootstrap';
 import Typed from 'typed.js';
-
-$(document).ready(() => {
-  console.log('Hello world');
-});
+import Splide from '@splidejs/splide';
+import '@splidejs/splide/dist/css/splide.min.css'
 
 // Navbar
 $('.navbar-toggler').on('click', function() {
@@ -42,6 +40,20 @@ if(document.body.classList.contains('home')) {
 // Single Product
 if(document.body.classList.contains('single-gadgets-product') || document.body.classList.contains('single-usb-product')) {
   console.log('single product')
+  //new Splide( '#splide' ).mount();
+  new Splide( '#splide', {
+    type   : 'loop',
+    pagination: false,
+    perPage: 4,
+    perMove: 1,
+    padding: 0,
+    gap: '10px',
+    breakpoints: {
+      640: {
+        perPage: 3,
+      },
+    },
+  }).mount();
 
   $('#qty-input').change(() => {
     var qty = $('#qty-input').val();
