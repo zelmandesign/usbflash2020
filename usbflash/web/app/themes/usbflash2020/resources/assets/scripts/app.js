@@ -42,7 +42,7 @@ if(document.body.classList.contains('single-gadgets-product') || document.body.c
   console.log('single product')
   //new Splide( '#splide' ).mount();
   new Splide( '#splide', {
-    type   : 'loop',
+    type   : 'slide',
     pagination: false,
     perPage: 4,
     perMove: 1,
