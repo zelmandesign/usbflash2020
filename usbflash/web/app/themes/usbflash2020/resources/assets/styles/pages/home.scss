@@ -110,79 +110,33 @@
   .home_prod_desc {
     color: #b5b5b5;
   }
+
+  .prod-icon-wrapper {
+    .product_icon_rollover {
+      display: none;
+    }
+
+    &:hover {
+      .product_icon_rollover {
+        display: block;
+      }
+
+      .product_icon {
+        display: none;
+      }
+    }
+  }
 }
 
 .home-spotlight {
-  color: $dark-heading;
+  color: #fff;
   margin-bottom: 0;
-  min-height: 752px;
+  min-height: 727px;
   background-position: absolute top -100px !important;
-
-  @include media-breakpoint-down(md) {
-    background-image: none !important;
-    margin-top: 50px;
-    min-height: 0;
-
-    .splat-mobile {
-      height: 260px;
-      background-size: cover !important;
-      background-position: top 50px !important;
-    }
-  }
-
-  @include media-breakpoint-up(md) {
-    .splat-mobile {
-      background-image: none !important;
-    }
-  }
-
-  .splat-wrapper {
-    position: relative;
-
-    .home-product {
-      position: absolute;
-      z-index: 1;
-      left: 40px;
-      top: 200px;
-
-      @include media-breakpoint-down(md) {
-        left: 30px;
-        top: 80px;
-        width: 65%;
-      }
-    }
-
-    .splat-bg {
-      position: absolute;
-      left: -200px;
-      width: 820px;
-      height: 513px;
-
-      @include media-breakpoint-down(md) {
-        left: -50px;
-        top: -20px;
-        width: 420px;
-        height: auto;
-      }
-    }
-  }
-
-  .text-wrapper {
-    max-width: 492px;
-    padding-top: 100px;
-
-    @include media-breakpoint-down(md) {
-      padding-top: 0;
-    }
-
-    .hero-heading {
-      font-size: 18px;
-      margin-bottom: -5px;
-    }
-  }
+  background-color: #28323b !important;
 
   .home-spotlight-text {
-    min-height: 40vh;
+    min-height: 50vh;
     display: flex;
     font-weight: 300;
 
@@ -193,23 +147,13 @@
 
   .sub-heading {
     font-weight: 600;
-  }
-
-  .btn-outline-danger {
-    font-size: 13px;
-    border: 3px solid $ligh-blue;
-    padding: 0.5rem 1.5rem;
-    color: $dark-heading;
-
-    &:hover {
-      background-color: $ligh-blue;
-      color: #fff;
-    }
+    font-size: 50px;
+    color: #fff;
   }
 }
 
 .home-featured {
-  margin-top: -50px;
+  margin-top: 100px;
   margin-bottom: 100px;
 
   @include media-breakpoint-down(md) {
@@ -304,4 +248,9 @@
     color: #fff;
     margin-top: 50px;
   }
+}
+
+.text-blue {
+  color: #29a8cb;
+  font-weight: 900;
 }

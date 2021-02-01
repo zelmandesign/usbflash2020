@@ -12,9 +12,14 @@
     @hasfield('products')
       <div class="row mb-md-5">
         @fields('products')
-          <div class="col-md-4 mb-md-5 mb-3">
+          <div class="col-md-4 mb-md-5 mb-5">
             <div class="row mb-3 mb-md-0">
-              <div class="col-xl-2 text-center text-xl-left mb-2"><a href="@sub('product_url')"><img src="@sub('product_icon', 'url')" alt="@sub('product_icon', 'alt')"></a></div>
+              <div class="col-xl-2 text-center text-xl-left mb-2 prod-icon-wrapper">
+                <a href="@sub('product_url')">
+                  <img src="@sub('product_icon_rollover', 'url')" alt="@sub('product_icon_rollover', 'alt')" class="img-fluid product_icon_rollover">
+                  <img src="@sub('product_icon', 'url')" alt="@sub('product_icon', 'alt')" class="img-fluid product_icon">
+                </a>
+              </div>
               <div class="col-xl-9 text-center text-xl-left pr-xl-5 pl-5 pr-5 pl-xl-0">
                 <a href="@sub('product_url')"><h2 class="text-bold">@sub('product_name')</h2></a>
                 <a href="@sub('product_url')"><div class="home_prod_desc">@sub('product_description')</div></a>
@@ -32,31 +37,32 @@
     <div class="container pt-5">
       <div class="row">
         @hassub('product_image')
-        <div class="col-md text-center splat-mobile" style="background: url('@field('home_spotlight_bg_image')');">
+        <div class="col-md-6 text-center splat-mobile d-flex align-items-center">
           <div class="splat-wrapper">
             <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" width="400" height="auto" class="home-product">
-            <img src="@asset('images/Featured-Promotional-Splat.svg')" alt="" width="820" height="513" class="splat-bg">
           </div>
         </div>
         @endsub
-        <div class="col-md home-spotlight-text d-flex align-items-center pt-5 pl-md-5">
+        <div class="col-md home-spotlight-text d-flex align-items-center">
           <div class="text-wrapper pl-md-5">
             @hassub('heading')
               <h3 class="hero-heading">@sub('heading')</h3>
             @endsub
             @hassub('product_name')
-              <div class="sub-heading">@sub('product_name')</div>
+              <div class="sub-heading">
+                We create
+                <div class="text-dark bg-white">
+                  promotional tech
+                </div>
+                that makes your
+                brand <span class="text-blue">stand out</span>
+              </div>
             @endsub
             @hassub('product_description')
               <div class="mt-2 mb-4">
                 @sub('product_description')
               </div>
             @endsub
-            @group('button')
-              @hassub('link')
-                <a href="@sub('link')" class="btn btn-outline-danger">@sub('text')</a>
-              @endsub
-            @endgroup
           </div>
         </div>
       </div>
