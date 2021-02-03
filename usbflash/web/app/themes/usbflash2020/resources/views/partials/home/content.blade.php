@@ -14,7 +14,7 @@
         @fields('products')
           <div class="col-md-4 mb-md-5 mb-5">
             <div class="row mb-3 mb-md-0">
-              <div class="col-xl-3 text-center text-xl-left mb-2 prod-icon-wrapper">
+              <div class="col-xl-3 text-center text-xl-left mb-2 prod-icon-wrapper d-flex justify-content-center ">
                 <a href="@sub('product_url')">
                   <img src="@sub('product_icon_rollover', 'url')" alt="@sub('product_icon_rollover', 'alt')" class="img-fluid product_icon_rollover">
                   <img src="@sub('product_icon', 'url')" alt="@sub('product_icon', 'alt')" class="img-fluid product_icon">
@@ -39,7 +39,7 @@
         @hassub('product_image')
         <div class="col-md-6 text-center splat-mobile d-flex align-items-center justify-content-center">
           <div class="splat-wrapper">
-            <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" width="" height="auto" class="home-product">
+            <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" width="auto" height="auto" class="home-product img-fluid">
           </div>
         </div>
         @endsub
