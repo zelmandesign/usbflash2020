@@ -14,13 +14,13 @@
         @fields('products')
           <div class="col-md-4 mb-md-5 mb-5">
             <div class="row mb-3 mb-md-0">
-              <div class="col-xl-2 text-center text-xl-left mb-2 prod-icon-wrapper">
+              <div class="col-xl-3 text-center text-xl-left mb-2 prod-icon-wrapper">
                 <a href="@sub('product_url')">
                   <img src="@sub('product_icon_rollover', 'url')" alt="@sub('product_icon_rollover', 'alt')" class="img-fluid product_icon_rollover">
                   <img src="@sub('product_icon', 'url')" alt="@sub('product_icon', 'alt')" class="img-fluid product_icon">
                 </a>
               </div>
-              <div class="col-xl-9 text-center text-xl-left pr-xl-5 pl-5 pr-5 pl-xl-0">
+              <div class="col-xl-8 text-center text-xl-left pr-xl-5 pl-5 pr-5 pl-xl-0">
                 <a href="@sub('product_url')"><h2 class="text-bold">@sub('product_name')</h2></a>
                 <a href="@sub('product_url')"><div class="home_prod_desc">@sub('product_description')</div></a>
               </div>
@@ -39,7 +39,7 @@
         @hassub('product_image')
         <div class="col-md-6 text-center splat-mobile d-flex align-items-center justify-content-center">
           <div class="splat-wrapper">
-            <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" width="400" height="auto" class="home-product">
+            <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" width="" height="auto" class="home-product">
           </div>
         </div>
         @endsub
@@ -80,7 +80,9 @@
         <div class="sub-heading mb-3">@field('featured_subheading')</div>
       @endfield
       @hasfield('featured_verbiage')
-        @field('featured_verbiage')
+        <div class="verbiage">
+          @field('featured_verbiage')
+        </div>
       @endfield
       <div class="bt-line mb-5"></div>
     </div>

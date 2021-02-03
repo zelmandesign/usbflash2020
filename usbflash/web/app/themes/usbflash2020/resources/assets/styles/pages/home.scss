@@ -131,9 +131,8 @@
 .home-spotlight {
   color: #fff;
   margin-bottom: 0;
-  min-height: 727px;
+  min-height: 875px;
   background-position: absolute top -100px !important;
-  background-color: #28323b !important;
 
   .home-spotlight-text {
     min-height: 50vh;
@@ -176,6 +175,10 @@
     font-size: 50px;
     line-height: 50px;
     font-weight: 600;
+  }
+
+  .verbiage {
+    color: #b5b5b5;
   }
 
   .bt-line {
