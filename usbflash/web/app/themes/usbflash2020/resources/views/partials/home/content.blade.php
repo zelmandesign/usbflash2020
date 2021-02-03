@@ -12,7 +12,7 @@
     @hasfield('products')
       <div class="row mb-md-5">
         @fields('products')
-          <div class="col-md-4 mb-md-5 mb-5">
+          <div class="col-md-4 mb-md-5 mb-5 pb-5">
             <div class="row mb-3 mb-md-0">
               <div class="col-xl-3 text-center text-xl-left mb-2 prod-icon-wrapper d-flex justify-content-center ">
                 <a href="@sub('product_url')">
@@ -33,7 +33,7 @@
 </section>
 
 @group('spotlight_product')
-  <section class="home-spotlight mb-5 mb-md-0" style="background: url('@field('home_spotlight_bg_image')') center center no-repeat;">
+  <section class="home-spotlight mb-5 mb-md-0 pt-5" style="background: url('@field('home_spotlight_bg_image')') center center no-repeat;">
     <div class="container pt-5">
       <div class="row">
         @hassub('product_image')
