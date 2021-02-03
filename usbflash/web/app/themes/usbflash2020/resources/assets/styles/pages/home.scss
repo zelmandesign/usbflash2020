@@ -160,24 +160,35 @@
     margin-top: 100px;
   }
 
+  .featured-wrapper {
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
   .hero-heading {
-    font-size: 18.5px;
+    font-size: 25px;
   }
 
   .sub-heading {
     margin-top: -5px;
-    font-size: 40px;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 600;
   }
 
   .bt-line {
-    background-color: #e5e5e5;
-    height: 1px;
-    width: 50px;
+    background-color: #419fba;
+    height: 5px;
+    width: 60px;
+    display: inline-flex;
+    text-align: center;
   }
 }
 
 .home-work-with-us {
-  min-height: 631px;
+  min-height: 800px;
   color: #fff;
   font-weight: 300;
   background-size: cover !important;

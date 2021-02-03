@@ -37,7 +37,7 @@
     <div class="container pt-5">
       <div class="row">
         @hassub('product_image')
-        <div class="col-md-6 text-center splat-mobile d-flex align-items-center">
+        <div class="col-md-6 text-center splat-mobile d-flex align-items-center justify-content-center">
           <div class="splat-wrapper">
             <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" width="400" height="auto" class="home-product">
           </div>
@@ -72,14 +72,19 @@
 
 <section class="home-featured product-list">
   <div class="container">
-    @hasfield('featured_heading')
-      <h3 class="hero-heading">@field('featured_heading')</h3>
-    @endfield
-    @hasfield('featured_subheading')
-      <div class="sub-heading">@field('featured_subheading')</div>
+    <div class="featured-wrapper">
+      @hasfield('featured_heading')
+        <h3 class="hero-heading">@field('featured_heading')</h3>
+      @endfield
+      @hasfield('featured_subheading')
+        <div class="sub-heading mb-3">@field('featured_subheading')</div>
+      @endfield
+      @hasfield('featured_verbiage')
+        @field('featured_verbiage')
+      @endfield
       <div class="bt-line mb-5"></div>
-    @endfield
-
+    </div>
+    
     @php
       $post_type = array('usb-product', 'gadgets-product');
       $args = array(
