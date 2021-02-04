@@ -41,7 +41,7 @@
             </select>
           @endif
         </div>
-        <div class="col-md-4 offset-md-4 prod-res mb-3 mb-md-0 d-none d-md-flex justify-content-end align-items-center">
+        <div class="col-md-6 offset-md-2 prod-res mb-3 mb-md-0 d-none d-md-flex justify-content-end align-items-center">
           <div class="ml-md-4">Displaying {{ $from }}-{{ $to }} of {{ $of }} results</div>
           <div class="prod-pagi">
             {{ the_posts_pagination( array(
@@ -54,9 +54,9 @@
             )) }}
           </div>
         </div>
-        <div class="col-md-4 offset-md-4 prod-res mb-3 mb-md-0 d-flex d-md-none justify-content-end flex-column">
-          <div class="ml-md-4 ml-auto mb-1">Displaying {{ $from }}-{{ $to }} of {{ $of }} results</div>
-          <div class="prod-pagi ml-auto">
+        <div class="col-md-6 offset-md-2 prod-res mb-3 mb-md-0 d-flex d-md-none justify-content-end flex-column">
+          <div class="ml-md-4 mb-1">Displaying {{ $from }}-{{ $to }} of {{ $of }} results</div>
+          <div class="prod-pagi">
             {{ the_posts_pagination( array(
               'screen_reader_text' => ' ', 
               'prev_text'          => ' ',
