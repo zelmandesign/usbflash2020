@@ -91,8 +91,8 @@
           </div>
           <small>@field('colors_text')</small>
         </div>
+        @field('text_under_colors')
         @endfield
-
       </div>
 
       @hasfield('prod_icons')
