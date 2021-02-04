@@ -502,3 +502,13 @@ hr {
 .form-group {
   margin-bottom: 1.8rem;
 }
+
+/* nav pagination */
+
+.pagination {
+  margin-left: 25px;
+
+  @include media-breakpoint-down(md) {
+    margin: 0;
+  }
+}
