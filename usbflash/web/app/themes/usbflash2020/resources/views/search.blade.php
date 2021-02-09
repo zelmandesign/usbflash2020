@@ -5,15 +5,15 @@
 
   <div class="container">
     @php
-      $post_type = 'gadgets-product';
+      //$post_type = 'gadgets-product';
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
       $args = array(
+        's' => sanitize_text_field( get_search_query( false ) ),
         'posts_per_page' => 12, 
         'paged' => $paged, 
-        'post_type' => $post_type
+        'post_type' => array('usb-product', 'gadgets-product')
       );
       query_posts($args);
-
       global $wp_query;
       $paged = !empty($wp_query->query_vars['paged']) ? $wp_query->query_vars['paged'] : 1;
       $prev_posts = ( $paged - 1 ) * $wp_query->query_vars['posts_per_page'];

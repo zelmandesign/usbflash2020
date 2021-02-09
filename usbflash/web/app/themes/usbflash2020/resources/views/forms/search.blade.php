@@ -5,7 +5,10 @@
         type="search"
         class="form-control"
         placeholder="{!! esc_attr_x('search promo gifts', 'placeholder', 'sage') !!}"
-        value="{{ get_search_query() }}"
+        value="{{ get_search_query(
+            array('usb-product', 'gadgets-product')
+          ) 
+          }}"
         name="s"
       >
     </label>
