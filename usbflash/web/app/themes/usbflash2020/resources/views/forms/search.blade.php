@@ -5,7 +5,7 @@
         type="search"
         class="form-control"
         placeholder="{!! esc_attr_x('search promo gifts', 'placeholder', 'sage') !!}"
-        value="{{ get_search_query(array('usb-product', 'gadgets-product')) }}"
+        value="{{ get_search_query() }}"
         name="s"
       >
     </label>
@@ -17,4 +17,4 @@
   </div>
 </form>
 
- 
+@php $query = apply_filters( 'get_search_query', get_query_var( 's' ) );  @endphp

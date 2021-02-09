@@ -57,6 +57,7 @@
             'before_page_number' => ' ',
             'after_page_number'  => ' ',
             'mid_size' => 2,
+            'show_all' => true,
           )) }}
         </div>
       </div>
@@ -70,6 +71,7 @@
             'before_page_number' => ' ',
             'after_page_number'  => ' ',
             'mid_size' => 2,
+            'show_all' => true,
           )) }}
         </div>
       </div>
@@ -98,6 +100,7 @@
           'before_page_number' => ' ',
           'after_page_number'  => ' ',
           'mid_size' => 2,
+          'show_all' => true,
         )) }}
       </div>
     </div>
