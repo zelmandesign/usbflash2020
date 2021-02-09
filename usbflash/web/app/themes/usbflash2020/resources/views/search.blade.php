@@ -4,6 +4,24 @@
   @include('partials.page-header')
 
   <div class="container">
+    @php
+      $post_type = 'gadgets-product';
+      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+      $args = array(
+        'posts_per_page' => 12, 
+        'paged' => $paged, 
+        'post_type' => $post_type
+      );
+      query_posts($args);
+
+      global $wp_query;
+      $paged = !empty($wp_query->query_vars['paged']) ? $wp_query->query_vars['paged'] : 1;
+      $prev_posts = ( $paged - 1 ) * $wp_query->query_vars['posts_per_page'];
+      $from = 1 + $prev_posts;
+      $to = count($wp_query->posts) + $prev_posts;
+      $of = $wp_query->found_posts;
+    @endphp
+
     <div class="row prod-pagination">
       <div class="col-md-2 mb-3 mb-md-0">
         <h2>Search Results:</h2>
