@@ -53,7 +53,7 @@
           @endfields
         @endfield
 
-        <div class="d-none d-md-block">
+        <div class="d-none d-md-flex">
           @if(get_post_type(get_the_ID()) == "gadgets-product")
             @include('partials.product.modal-tech')
           @elseif(get_post_type(get_the_ID()) == "usb-product")

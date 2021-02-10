@@ -66,3 +66,18 @@ add_theme_support('sage');
 */
 
 new Roots\Acorn\Bootloader();
+
+/**
+ * Login redirects
+ */
+
+function my_page_template_redirect() {
+    if ( is_post_type_archive('usb-product')) {
+        wp_redirect( home_url( '/usb-sticks/' ) );
+            exit();
+    } elseif (is_post_type_archive('gadgets-product')) {
+            wp_redirect( home_url( '/tech-gifts/' ) );
+            exit();
+    }
+}
+add_action( 'template_redirect', 'my_page_template_redirect' );

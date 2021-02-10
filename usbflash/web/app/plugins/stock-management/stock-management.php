@@ -34,7 +34,7 @@ function register_usb_drives_post_type()
             'show_in_nav_menus' => true,
             'supports' => array( 'title', 'editor', 'thumbnail', 'post-formats', 'custom-fields' , 'excerpt' ),
             'hierarchical' => false,
-            'has_archive' => false,
+            'has_archive' => 'usb',
             'taxonomies' => array('usb-category', 'product_tag'),
             'rewrite' => array( 'slug' => 'usb', 'hierarchical' => true, 'with_front' => false )
         )
@@ -90,7 +90,7 @@ function register_gadgets_post_type()
             'show_in_nav_menus' => true,
             'supports' => array( 'title', 'editor', 'thumbnail', 'post-formats', 'custom-fields', 'excerpt' ),
             'hierarchical' => false,
-            'has_archive' => false,
+            'has_archive' => 'gadgets',
             'taxonomies' => array('gadgets-category', 'product_tag'),
             'rewrite' => array( 'slug' => 'gadgets', 'hierarchical' => true, 'with_front' => false )
         )

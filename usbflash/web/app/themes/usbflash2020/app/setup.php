@@ -166,3 +166,18 @@ function wpcover_move_yoast() {
     return 'low';
 }
 add_filter('wpseo_metabox_prio', 'wpcover_move_yoast');
+
+/**
+ * Login redirects
+ */
+
+function my_page_template_redirect() {
+    if ( is_post_type_archive('usb-product')) {
+        wp_redirect( home_url( '/usb-sticks/' ) );
+            exit();
+    } elseif (is_post_type_archive('gadgets-product')) {
+            wp_redirect( home_url( '/tech-gifts/' ) );
+            exit();
+    }
+}
+add_action( 'template_redirect', 'my_page_template_redirect' );
