@@ -66,3 +66,11 @@ add_theme_support('sage');
 */
 
 new Roots\Acorn\Bootloader();
+
+
+// De-register jQuery from Contact Form 7
+
+add_action( 'wp_print_scripts', 'my_deregister_javascript', 100 );
+function my_deregister_javascript() {
+    wp_deregister_script( 'contact-form-7' );
+}
