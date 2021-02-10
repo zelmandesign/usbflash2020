@@ -170,6 +170,10 @@
     font-size: 50px;
     color: #fff;
     max-width: 450px;
+
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+    }
   }
 
   @include media-breakpoint-down(md) {
