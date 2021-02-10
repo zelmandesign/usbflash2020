@@ -111,6 +111,16 @@
     margin-bottom: 125px;
   }
 
+  @include media-breakpoint-down(md) {
+    .hero-heading {
+      font-size: 20px;
+    }
+
+    .sub-heading {
+      font-size: 45px;
+    }
+  }
+
   .home_prod_desc {
     color: #b5b5b5;
   }
@@ -161,6 +171,16 @@
     color: #fff;
     max-width: 450px;
   }
+
+  @include media-breakpoint-down(md) {
+    .hero-heading {
+      font-size: 20px;
+    }
+
+    .sub-heading {
+      font-size: 37px;
+    }
+  }
 }
 
 .home-featured {
@@ -199,6 +219,16 @@
     width: 60px;
     display: inline-flex;
     text-align: center;
+  }
+
+  @include media-breakpoint-down(md) {
+    .hero-heading {
+      font-size: 20px;
+    }
+
+    .sub-heading {
+      font-size: 37px;
+    }
   }
 }
 
@@ -279,4 +309,16 @@
 .text-blue {
   color: #29a8cb;
   font-weight: 900;
+}
+
+.bg-green {
+  background-color: #00baae !important;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent; 
+  border-top: 100px solid #28323b;
 }

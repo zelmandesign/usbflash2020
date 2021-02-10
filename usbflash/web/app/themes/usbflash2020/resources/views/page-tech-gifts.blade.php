@@ -28,14 +28,14 @@
           <h2>All Products</h2>
         </div>
         <div class="col-md-2 mb-3 mb-md-0">
-          @if($gadgetsTerms)
+          @if($usbTerms)
             <select class="form-control form-control-sm" onchange="window.location=this.value">
               <option selected value="">+ Filter Products</option>
-              @foreach ($gadgetsTerms as $item)
+              @foreach ($usbTerms as $item)
                 @if($item->name == "Featured")
                   return false
                 @else 
-                  <option value="/gadgets-category/{{ $item->slug }}">{{ $item->name }}</option>
+                  <option value="/usb-category/{{ $item->slug }}">{{ $item->name }}</option>
                 @endif
               @endforeach
             </select>
@@ -55,8 +55,8 @@
             )) }}
           </div>
         </div>
-        <div class="col-md-6 offset-md-2 prod-res mb-3 mb-md-0 d-flex d-md-none justify-content-end flex-column">
-          <div class="ml-md-4 mb-1">Displaying {{ $from }}-{{ $to }} of {{ $of }} results</div>
+        <div class="col-md-6 offset-md-2 prod-res mb-1 mb-md-0 d-flex d-md-none justify-content-end flex-column">
+          <div class="ml-md-4 pb-3">Displaying {{ $from }}-{{ $to }} of {{ $of }} results</div>
           <div class="prod-pagi">
             {{ the_posts_pagination( array(
               'screen_reader_text' => ' ', 

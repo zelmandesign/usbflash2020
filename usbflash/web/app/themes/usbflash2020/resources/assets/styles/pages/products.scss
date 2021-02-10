@@ -272,6 +272,10 @@ hr {
 
   .single-prod-top {
     margin-bottom: 145px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 50px;
+    }
   }
 
   .hero-heading {
@@ -392,6 +396,13 @@ hr {
     background-color: #fff;
     border: 1px solid $ligh-blue;
     padding: 1.25rem 0.75rem;
+  }
+
+  select {
+    padding: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    height: 40px;
   }
 
   .input-group {

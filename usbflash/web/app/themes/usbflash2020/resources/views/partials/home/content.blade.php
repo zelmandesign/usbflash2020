@@ -1,6 +1,6 @@
 <section class="home-browse">
   <div class="container">
-    <div class="text-center mt-5 mb-5">
+    <div class="text-center mt-5 mb-md-5 mb-0">
       @hasfield('our_prod_heading')
         <div class="hero-heading">@field('our_prod_heading')</div>
       @endfield
@@ -12,9 +12,15 @@
     @hasfield('products')
       <div class="row mb-md-5">
         @fields('products')
-          <div class="col-md-4 mb-md-5 mb-5 pb-5">
+          <div class="col-md-4 mb-md-5 mb-2 pb-5">
             <div class="row mb-3 mb-md-0">
-              <div class="col-xl-3 text-center text-xl-left mb-2 prod-icon-wrapper d-flex justify-content-center ">
+              <div class="col-xl-3 text-center text-xl-left mb-2 prod-icon-wrapper d-flex d-md-none justify-content-center">
+                <a href="@sub('product_url')">
+                  <img src="@sub('product_icon_rollover', 'url')" alt="@sub('product_icon_rollover', 'alt')" class="img-fluid product_icon_rollover" width="100px" height="auto">
+                  <img src="@sub('product_icon', 'url')" alt="@sub('product_icon', 'alt')" class="img-fluid product_icon" width="100px" height="auto">
+                </a>
+              </div>
+              <div class="col-xl-3 text-center text-xl-left mb-2 prod-icon-wrapper d-none d-md-flex d-md-none justify-content-center">
                 <a href="@sub('product_url')">
                   <img src="@sub('product_icon_rollover', 'url')" alt="@sub('product_icon_rollover', 'alt')" class="img-fluid product_icon_rollover">
                   <img src="@sub('product_icon', 'url')" alt="@sub('product_icon', 'alt')" class="img-fluid product_icon">
@@ -33,11 +39,11 @@
 </section>
 
 @group('spotlight_product')
-  <section class="home-spotlight mb-5 mb-md-0 pt-5" style="background: url('@field('home_spotlight_bg_image')') center center no-repeat;">
+  <section class="home-spotlight mb-0 mb-md-5 mb-md-0 pt-5 text-center text-md-left" style="background: url('@field('home_spotlight_bg_image')') center center no-repeat;">
     <div class="container pt-5">
       <div class="row">
         @hassub('product_image')
-        <div class="col-md-6 text-center splat-mobile d-flex align-items-center justify-content-center">
+        <div class="col-md-6 text-center splat-mobile d-none d-md-flex align-items-center justify-content-center">
           <div class="splat-wrapper">
             <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" width="auto" height="auto" class="home-product img-fluid">
           </div>
@@ -49,13 +55,31 @@
               <h3 class="hero-heading">@sub('heading')</h3>
             @endsub
             @hassub('product_name')
-              <div class="sub-heading">
+              <div class="sub-heading mb-3 d-none d-md-block">
                 We create
-                <div class="text-dark bg-white">
-                  promotional tech
-                </div>
-                that makes your
-                brand <span class="text-blue">stand out</span>
+                <span class="text-dark bg-white">
+                  promotional
+                </span>
+                <span class="text-dark bg-green">
+                gadgets & tech
+                </span>
+                that makes
+                your
+                brand
+                <span class="text-blue">stand out</span>
+              </div>
+              <div class="sub-heading mb-3 d-block d-md-none">
+                We create<br>
+                <span class="text-dark bg-white">
+                  promotional<br>
+                </span>
+                <span class="text-dark bg-green">
+                gadgets & tech<br>
+                </span>
+                that makes <br>
+                your
+                brand 
+                <br><span class="text-blue">stand out</span>
               </div>
             @endsub
             @hassub('product_description')
@@ -65,9 +89,21 @@
             @endsub
           </div>
         </div>
+        @hassub('product_image')
+        <div class="col-md-6 text-center splat-mobile d-flex d-md-none align-items-center justify-content-center">
+          <div class="splat-wrapper">
+            <img src="@sub('product_image', 'url')" alt="@sub('product_image', 'alt')" width="auto" height="auto" class="home-product img-fluid">
+          </div>
+        </div>
+        @endsub
       </div>
     </div>
+    
   </section>
+  <div class="container text-center w-100 d-flex d-md-none justify-content-center">
+    <div class="arrow-down"></div>
+  </div>
+  
 @endgroup
 
 <section class="home-featured product-list">
@@ -80,7 +116,7 @@
         <div class="sub-heading mb-3">@field('featured_subheading')</div>
       @endfield
       @hasfield('featured_verbiage')
-        <div class="verbiage">
+        <div class="verbiage mt-5 mt-md-0">
           @field('featured_verbiage')
         </div>
       @endfield

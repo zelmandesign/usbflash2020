@@ -19,14 +19,22 @@
           </div>
         @endfield
       </div>
-      <div class="col-md pl-md-5">
-        <h1 class="entry-title mb-4 mt-3 text-center text-md-left">
+      <div class="col-md pl-md-5 mt-2 mt-md-0">
+        <h1 class="entry-title mb-4 pt-5 text-center text-md-left">
           {!! $title !!}
         </h1>
         <div class="mb-4 text-center text-md-left">
           @hasfield('prod_short_description')
             @field('prod_short_description')
           @endfield
+        </div>
+
+        <div class="d-block d-md-none mb-5 pb-3">
+          @if(get_post_type(get_the_ID()) == "gadgets-product")
+            @include('partials.product.modal-tech')
+          @elseif(get_post_type(get_the_ID()) == "usb-product")
+            @include('partials.product.modal-usb')
+          @endif
         </div>
 
         @hasfield('paragraphs_&_icons')
@@ -45,54 +53,63 @@
           @endfields
         @endfield
 
-        @if(get_post_type(get_the_ID()) == "gadgets-product")
-          @include('partials.product.modal-tech')
-        @elseif(get_post_type(get_the_ID()) == "usb-product")
-          @include('partials.product.modal-usb')
-        @endif
-        
+        <div class="d-none d-md-block">
+          @if(get_post_type(get_the_ID()) == "gadgets-product")
+            @include('partials.product.modal-tech')
+          @elseif(get_post_type(get_the_ID()) == "usb-product")
+            @include('partials.product.modal-usb')
+          @endif
+        </div>
       </div>
     </div>
 
     <div class="row single-prod-bottom">
       <div class="col-md-5 pb-4">
-        <h3 class="hero-heading">
+        <h3 class="hero-heading text-center text-md-left">
           @field('product_subheading')
         </h3>
-        @field('main_product_description')
-        @hasfield('show_product_options')
-          <h4 class="prod-options-title mb-4 mt-5">
-            @field('prod_options_title')
-          </h4>
-
-          @hasfield('prod_options')
-            <div class="option-wrapper">
-              @fields('prod_options')
-                <div class="option d-flex justify-content-center align-items-center mr-3 mb-4">
-                  @sub('option')
-                </div>
-              @endfields
-            </div>
-          @endfield
-
-        @endfield
+        <span class="text-center text-md-left">
+          @field('main_product_description')
+        </span>
         
-        @hasfield('colors')
-        <div class="prod-colors">
-          <div class="prod-options-title mt-2">
-            Standard colours
+        <span class="text-center text-md-left">
+          @hasfield('show_product_options')
+            <h4 class="prod-options-title mb-4 mt-5">
+              @field('prod_options_title')
+            </h4>
+
+            @hasfield('prod_options')
+              <div class="option-wrapper">
+                @fields('prod_options')
+                <div class="col-4">
+                  <div class="option d-flex justify-content-center align-items-center mb-4">
+                    @sub('option')
+                  </div>
+                </div>
+                  
+                @endfields
+              </div>
+            @endfield
+
+          @endfield
+          
+          @hasfield('colors')
+          <div class="prod-colors mb-5 mb-md-0">
+            <div class="prod-options-title mt-2">
+              Standard colours
+            </div>
+            <div class="colors">
+              @if($colorsProd)
+                @foreach ($colorsProd as $color)
+                  <div class="color {{ $color }} mr-2 mt-3"></div>
+                @endforeach
+              @endif
+            </div>
+            <small>@field('colors_text')</small>
           </div>
-          <div class="colors">
-            @if($colorsProd)
-              @foreach ($colorsProd as $color)
-                <div class="color {{ $color }} mr-2 mt-3"></div>
-              @endforeach
-            @endif
-          </div>
-          <small>@field('colors_text')</small>
-        </div>
-        @field('text_under_colors')
-        @endfield
+          @field('text_under_colors')
+          @endfield
+        </span>
       </div>
 
       @hasfield('prod_icons')

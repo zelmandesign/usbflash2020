@@ -66,5 +66,3 @@ add_theme_support('sage');
 */
 
 new Roots\Acorn\Bootloader();
-
-

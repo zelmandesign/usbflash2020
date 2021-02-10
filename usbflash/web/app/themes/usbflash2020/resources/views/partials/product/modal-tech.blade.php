@@ -27,7 +27,7 @@
             We aim to get price back to you within 1 hour, although during busy periods there may be a slightly longer wait
           </div>
          
-          @shortcode('[contact-form-7 id="401" title="Tech Gifts Product"]')
+            @shortcode('[contact-form-7 id="401" title="Tech Gifts Product"]')
 
         </div>
       </div>

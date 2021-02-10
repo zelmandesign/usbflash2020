@@ -1,54 +1,3 @@
-<div class="form-group row">
-  <label for="recipient-name" class="col-sm-4 col-form-label mb-2 mb-md-0">Quantity</label>
-  <div class="col-sm-8 d-flex justify-content-center">
-    <div class="input-group">
-     <input type="text" name="text-983" value="ex. 100" size="40" class="form-control" id="qty" placeholder="ex. 100" id="qty"><div class="qty-btn-like">QTY</div>
-    </div>
-  </div>
-</div>
-<fieldset class="form-group">
-  <div class="row">
-    <legend class="col-form-label col-sm-4 pt-0">How many print colours:</legend>
-    <div class="col-sm-8">
-      <div class="form-check custom-control-inline">
-        <input class="form-check-input" type="radio" name="radio-784" id="gridRadios1" value="1color" checked>
-        <label class="form-check-label" for="gridRadios1">1 col</label>
-      </div>
-      <div class="form-check custom-control-inline">
-        <input class="form-check-input" type="radio" name="radio-784" id="gridRadios2" value="2colors">
-        <label class="form-check-label" for="gridRadios2">2 col</label>
-      </div>
-      <div class="form-check custom-control-inline">
-        <input class="form-check-input" type="radio" name="radio-784" id="gridRadios3" value="3colors">
-        <label class="form-check-label" for="gridRadios3">3 col</label>
-      </div>
-      <div class="form-check custom-control-inline">
-        <input class="form-check-input" type="radio" name="radio-784" id="gridRadios4" value="4colors">
-        <label class="form-check-label" for="gridRadios4">4 col</label>
-      </div>
-    </div>
-  </div>
-</fieldset>
-<div class="form-group row">
-  <div class="col">
-    <input type="text" class="form-control" placeholder="Your Name" name="your-name" value="Your name" required>
-  </div>
-  <div class="col">
-    <input type="text" class="form-control" placeholder="Your Company Name" name="text-822" value="Your Company Name">
-  </div>
-</div>
-<div class="form-group row">
-  <div class="col">
-    <input type="text" class="form-control" id="staticEmail" name="your-email" value="Email Address" placeholder="Email Address" required>
-  </div>
-</div>
-<div class="form-group">
-  <textarea class="form-control" id="message-text" placeholder="Special Notes" name="your-message"></textarea>
-</div>
-<div class="form-group text-right">
-  <input type="submit" value="Send" class="btn btn-danger">
-</div>
-
 <form>
   <div class="row">
     <div class="col-5">
@@ -56,6 +5,25 @@
         <label for="inputPassword" class="col-sm-5 col-form-label">Quantity:</label>
         <div class="col-sm-5" style="margin-left: -5px;">
           <input type="number" class="form-control" id="qty" name="text-983" placeholder="100">
+        </div>
+      </div>
+    </div>
+    <div class="col-7">
+      <div class="form-group row">
+        <label for="exampleFormControlSelect1" class="col-sm-4 col-form-label">Memory Size:</label>
+        <div class="col-sm-8">
+          <select class="form-control" id="exampleFormControlSelect1" name="menu-639">
+            <option disabled selected>Select memory size</option>
+            <option>256MB</option>
+            <option>512MB</option>
+            <option>1GB</option>
+            <option>2GB</option>
+            <option>4GB</option>
+            <option>8GB</option>
+            <option>16GB</option>
+            <option>32GB</option>
+            <option>64GB</option>
+          </select>
         </div>
       </div>
     </div>
