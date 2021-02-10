@@ -29,51 +29,47 @@
           @endfield
         </div>
 
-        <div class="modal-wrapper mt-5 text-center text-md-left d-block d-md-none mb-5">
-          <div class="sub mb-4">how many do you need?</div>
-          <div class="modal-qty">
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" id="qty-input" placeholder="ex. 100" aria-label="ex. 100" aria-describedby="basic-addon2" > 
-              <div class="input-group-append">
-                <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#productModal" id="qty-submit" data-qty="">quick quote</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        @hasfield('paragraphs_&_icons')
-          @fields('paragraphs_&_icons')
-            <div class="row mb-4 text-center text-md-left">
-              <div class="col-md-2 mb-3 mb-md-0">
-                <img src="@sub('icon', 'url')" alt="@sub('icon', 'alt')" class="img-fluid mt-1" />  
-              </div>
-              <div class="col-md pl-5 pr-5 pl-md-0 pr-md-0">
-                <h2 class="prod_short_desc_title">@sub('title')</h2>
-                <div class="prod-verbiage">
-                  @sub('verbiage')
+        <div class="d-none d-md-block">
+          @hasfield('paragraphs_&_icons')
+            @fields('paragraphs_&_icons')
+              <div class="row mb-4 text-center text-md-left">
+                <div class="col-md-2 mb-3 mb-md-0">
+                  <img src="@sub('icon', 'url')" alt="@sub('icon', 'alt')" class="img-fluid mt-1" />  
+                </div>
+                <div class="col-md pl-5 pr-5 pl-md-0 pr-md-0">
+                  <h2 class="prod_short_desc_title">@sub('title')</h2>
+                  <div class="prod-verbiage">
+                    @sub('verbiage')
+                  </div>
                 </div>
               </div>
-            </div>
-          @endfields
-        @endfield
-
-        <div class="modal-wrapper mt-5 text-center text-md-left d-none d-md-block">
-          <div class="sub mb-4">how many do you need?</div>
-          <div class="modal-qty">
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" id="qty-input" placeholder="ex. 100" aria-label="ex. 100" aria-describedby="basic-addon2" > 
-              <div class="input-group-append">
-                <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#productModal" id="qty-submit" data-qty="">quick quote</button>
-              </div>
-            </div>
-          </div>
+            @endfields
+          @endfield
         </div>
-
+      
         @if(get_post_type(get_the_ID()) == "gadgets-product")
           @include('partials.product.modal-tech')
         @elseif(get_post_type(get_the_ID()) == "usb-product")
           @include('partials.product.modal-usb')
         @endif
+
+        <div class="d-block d-md-none mt-5">
+          @hasfield('paragraphs_&_icons')
+            @fields('paragraphs_&_icons')
+              <div class="row mb-4 text-center text-md-left">
+                <div class="col-md-2 mb-3 mb-md-0">
+                  <img src="@sub('icon', 'url')" alt="@sub('icon', 'alt')" class="img-fluid mt-1" />  
+                </div>
+                <div class="col-md pl-5 pr-5 pl-md-0 pr-md-0">
+                  <h2 class="prod_short_desc_title">@sub('title')</h2>
+                  <div class="prod-verbiage">
+                    @sub('verbiage')
+                  </div>
+                </div>
+              </div>
+            @endfields
+          @endfield
+        </div>
       </div>
     </div>
 
